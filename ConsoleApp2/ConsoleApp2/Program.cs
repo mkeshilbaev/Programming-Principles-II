@@ -10,6 +10,10 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine(short.MaxValue);
+            Console.WriteLine(Guid.NewGuid().ToString());
+            Console.ReadKey();
         }
     }
 }
