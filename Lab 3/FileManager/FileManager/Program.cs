@@ -12,7 +12,7 @@ namespace FileManager
         static int CONSOLE_SIZE = 27;
         static void ShowDirectoryInfo(DirectoryInfo directory, int cursor, int first)
         {
-            Console.BackgroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.Clear();
             Console.CursorVisible = false;
             FileSystemInfo[] fss = directory.GetFileSystemInfos();
@@ -51,6 +51,8 @@ namespace FileManager
             int cursor = 0;
             ShowDirectoryInfo(directory, cursor, first);
             int n = directory.GetFileSystemInfos().Length;
+
+            //static ShowFileSize = new ShowFileSize();
 
             while (true)
             {
