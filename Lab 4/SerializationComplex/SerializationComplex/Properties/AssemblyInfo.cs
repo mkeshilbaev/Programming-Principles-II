@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("SnakeTest")]
+[assembly: AssemblyTitle("SerializationComplex")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SnakeTest")]
+[assembly: AssemblyProduct("SerializationComplex")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("0f481952-27e4-4d6c-9fea-97ac0f22b8be")]
+[assembly: Guid("b7759bb4-166e-473b-9998-3237f92f85f7")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

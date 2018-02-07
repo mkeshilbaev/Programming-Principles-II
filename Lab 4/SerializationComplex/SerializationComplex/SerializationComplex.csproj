@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F481952-27E4-4D6C-9FEA-97AC0F22B8BE}</ProjectGuid>
+    <ProjectGuid>{B7759BB4-166E-473B-9998-3237F92F85F7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SnakeTest</RootNamespace>
-    <AssemblyName>SnakeTest</AssemblyName>
+    <RootNamespace>SerializationComplex</RootNamespace>
+    <AssemblyName>SerializationComplex</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Complex.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

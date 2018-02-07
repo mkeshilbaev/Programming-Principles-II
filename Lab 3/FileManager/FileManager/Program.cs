@@ -4,43 +4,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using static System.Console;
 
 namespace FileManager
 {
     class Program
     {
-        static int CONSOLE_SIZE = 27;
-        static void ShowDirectoryInfo(DirectoryInfo directory, int cursor, int first)
+        static int CONSOLE_SIZE = 28;
+         static void ShowDirectoryInfo(DirectoryInfo directory, int cursor, int first)
         {
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.Clear();
             Console.CursorVisible = false;
-            FileSystemInfo[] fss = directory.GetFileSystemInfos();
+             FileSystemInfo[] fss = directory.GetFileSystemInfos();
             int index = 0;
 
             foreach (FileSystemInfo f in fss)
             {
                 if (index == cursor)
                 {
-                    Console.BackgroundColor = ConsoleColor.White;
-                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                 }
 
                 else if (f.GetType() == typeof(DirectoryInfo))
                 {
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.BackgroundColor = ConsoleColor.DarkBlue;
                 }
 
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.BackgroundColor = ConsoleColor.Blue;
+                    Console.BackgroundColor = ConsoleColor.DarkBlue;
                 }
 
                 if (index >= first && index <= first + CONSOLE_SIZE)
                     Console.WriteLine(f.Name);
                 index++;
+            }
+        }
+
+        static void DrawLAT()
+        {
+
+            DirectoryInfo dir = new DirectoryInfo(@"C:\");
+            FileSystemInfo[] items = dir.GetFileSystemInfos();
+            for(int i = 0; i < items.Length; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.SetCursorPosition(60, i);
+                Console.WriteLine(items[i].LastAccessTime);
             }
         }
 
@@ -51,9 +65,7 @@ namespace FileManager
             int cursor = 0;
             ShowDirectoryInfo(directory, cursor, first);
             int n = directory.GetFileSystemInfos().Length;
-
-            //static ShowFileSize = new ShowFileSize();
-
+            
             while (true)
             {
                 ConsoleKeyInfo keyInfo = Console.ReadKey();
@@ -87,7 +99,7 @@ namespace FileManager
                         first++;
                     }
                 }
-               
+
                 if (keyInfo.Key == ConsoleKey.Enter)
                 {
                     if (directory.GetFileSystemInfos()[cursor].GetType() == typeof(DirectoryInfo))
@@ -121,10 +133,13 @@ namespace FileManager
                     }
 
                     else
-                        break;        
+                        break;
                 }
+                
                 ShowDirectoryInfo(directory, cursor, first);
+                DrawLAT();
             }
         }
+        
     }
 }
