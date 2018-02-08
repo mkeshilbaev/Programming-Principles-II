@@ -30,16 +30,16 @@ namespace SerializationComplex
             Complex sum = c1 + c2;
             Complex sub = c1 - c2;
 
-            //XML Serialization:
+            //XML Serialization: Deserializtion работает только с одной операцией, поэтому в Serialization задаю только mul;
             FileStream fs = new FileStream(@"D:\data1.xml", FileMode.Create, FileAccess.Write);
             XmlSerializer xs = new XmlSerializer(typeof(Complex));
 
             try
             {
                 xs.Serialize(fs, mul);
-                xs.Serialize(fs, div);
+                /*xs.Serialize(fs, div);
                 xs.Serialize(fs, sum);
-                xs.Serialize(fs, sub);
+                xs.Serialize(fs, sub);*/
             }
             catch (Exception e)
             {
@@ -61,7 +61,7 @@ namespace SerializationComplex
             }
             catch (Exception e)
             {
-                Console.WriteLine("The XML file is deserialized!");
+                Console.WriteLine(e.Message);
             }
             finally
             {
@@ -80,7 +80,7 @@ namespace SerializationComplex
                 bf.Serialize(fs, mul);
                 bf.Serialize(fs, div);
                 bf.Serialize(fs, sum);
-                bf.Serialize(fs, sub);
+                bf.Serialize(fs, sub); 
             }
             catch (Exception e)
             {

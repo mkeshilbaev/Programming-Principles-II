@@ -33,7 +33,7 @@ namespace ComplexNum
             this.a = a / div;
             this.b = b / div;        
         }
-        
+
         public static int Lcm(int a, int b)
         {
             for (int i = Math.Max(a, b); i < a * b; i++)
@@ -41,15 +41,15 @@ namespace ComplexNum
                 if (i % a == 0 && i % b == 0)
                 {
                     return i;
-                    break;
+                    //break;
                 }
             }
             return a * b;
         }
-
+            
         public static Complex operator *(Complex x, Complex y)
         {
-            Complex res1 = new Complex(x.a * y.a, x.b * y.b);
+            Complex res1 = new Complex(y.b * x.b, y.a * x.a);
             res1.Simplify();
             if (res1.b < 0)
             {
@@ -98,6 +98,7 @@ namespace ComplexNum
             }
             return res4;
         }
+
 
         public override string ToString()
         {
