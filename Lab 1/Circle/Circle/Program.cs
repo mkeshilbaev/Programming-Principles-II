@@ -16,9 +16,9 @@ namespace Circle
         public Circle (double r)
         {
             radius = r;
-            FindArea();
+            /*FindArea();
             FindDiameter();
-            FindCircumference();
+            FindCircumference();*/
         }
         public void FindArea()
         {

@@ -38,7 +38,7 @@ namespace max_and_min_from_file
             }
             Console.WriteLine(mn);
 
-            //SR.Close();
+            SR.Close();
 
             //foreach (string sOutput in arr)
                 //Console.WriteLine(sOutput);
