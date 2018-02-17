@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{08F6C174-3EF3-4F7A-8239-29BBB7D75EA6}</ProjectGuid>
+    <ProjectGuid>{46AD79F0-B95E-4E3C-BBF5-845B5A825181}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FAR</RootNamespace>
-    <AssemblyName>FAR</AssemblyName>
+    <RootNamespace>Snake</RootNamespace>
+    <AssemblyName>Snake</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

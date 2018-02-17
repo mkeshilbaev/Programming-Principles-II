@@ -3,71 +3,64 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
-using static System.Console;
 
 namespace Snake
 {
     class Program
     {
-         static void Main(string[] args)
+        static void Main(string[] args)
         {
-
-            /*walls
-            snake body
-            apples (random)
-            to move snake auto
-            to add tail to the snake
-            try and catch if error
-            gameover
-          */
-            /*int level = 1;
+            Console.CursorVisible = false;
+            Console.SetWindowSize(70, 20);
             Snake snake = new Snake();
+            Food food = new Food();
             Wall wall = new Wall();
+
+
 
             while (true)
             {
-                ConsoleKeyInfo keyInfo = Console.ReadKey();
-                if (keyInfo.Key == ConsoleKey.DownArrow)
-                    snake.Move(0, 1);
-
-                if (keyInfo.Key == ConsoleKey.UpArrow)
-                    snake.Move(0, -1);
-
-                if (keyInfo.Key == ConsoleKey.LeftArrow)
-                    snake.Move(-1, 0);
-
-                if (keyInfo.Key == ConsoleKey.RightArrow)
-                    snake.Move(1, 0);
-
-                if (keyInfo.Key == ConsoleKey.R)
-                {
-                    level = 1;
-                    snake = new Snake();
-                    wall = new Wall(level);
-                }
-                    if (snake.CollisionWithWall (wall) || snake.Collision())
-                {
-                    Console.Clear();
-                    Console.SetCursorPosition(5, 5);
-                    Console.WriteLine("Game is over!!!");
-                    Console.ReadKey();
-                    snake = new Snake();
-                    level = 1;
-                    wall = new Wall(level);
-
-                }
-                if (snake.cnt % 400 == 0)
-                {
-                    level++;
-                    wall = new Wall();
-                }
-                Console.Clear();
+                //Console.Clear();
                 snake.Draw();
+                food.Draw();
                 wall.Draw();
-               
+
+                ConsoleKeyInfo btn = Console.ReadKey();
+                switch (btn.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        snake.Move(0, -1);
+                        break;
+                    case ConsoleKey.DownArrow:
+                        snake.Move(0, 1);
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        snake.Move(-1, 0);
+                        break;
+                    case ConsoleKey.RightArrow:
+                        snake.Move(1, 0);
+                        break;
+                }
+
+
+                if (snake.body[0].x < 0)
+                    snake.body[0].x = 69;
+                if (snake.body[0].x > 69)
+                    snake.body[0].x = 0;
+                if (snake.body[0].y < 0)
+                    snake.body[0].y = 19;
+                if (snake.body[0].y > 19)
+                    snake.body[0].y = 0;
+
+
+
+                if (snake.CanEat(food))
+                {
+                    food.SetRandomPosition();
+                }
             }
-            */
+
+
         }
     }
 }
