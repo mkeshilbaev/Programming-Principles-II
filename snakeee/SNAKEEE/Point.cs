@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Snake
+namespace SNAKEEE
 {
+    //[Serializable]
     class Point
     {
         public int x, y;
 
-        public Point(int _x, int _y)
+        public Point(int x, int y)
         {
-            x = _x;
-            y = _y;
+            this.x = x;
+            this.y = y;
         }
     }
 }
