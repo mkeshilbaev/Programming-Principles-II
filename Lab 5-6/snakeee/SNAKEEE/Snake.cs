@@ -2,25 +2,24 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace SNAKEEE
 {
-   // [Serializable]
-    class Snake
+
+    public class Snake
     {
         public List<Point> body;
         public string sign;
         public ConsoleColor color;
-        public int score = 0;       
+        public int score = 1;       
 
         public Snake()
         {          
             sign = "*";
             body = new List<Point>();
-            body.Add(new Point(5, 5));
             color = ConsoleColor.Yellow;
         }
 
@@ -39,19 +38,44 @@ namespace SNAKEEE
             body[0].x += dx;
             body[0].y += dy;
 
-            if (body[0].x < 1)
+            if (body[0].x < 0)
                 body[0].x = Console.WindowWidth - 1;
             if (body[0].x > Console.WindowWidth - 1)
-                body[0].x = 1;
+                body[0].x = 0;
 
-            if (body[0].y < 3)
-                body[0].y = Console.WindowHeight - 1;
-            if (body[0].y > Console.WindowHeight - 1)
-                body[0].y = 3;
+            if (body[0].y < 0)
+                body[0].y = 20;
+            if (body[0].y > 20)
+                body[0].y = 0;
+        }
+
+        public void Save()
+        {
+            string fname = @"snake.xml";
+
+            using (FileStream fs = new FileStream(fname, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+            {
+                XmlSerializer xs = new XmlSerializer(typeof(Snake));
+                xs.Serialize(fs, this);
+            }
+        }
+
+        public static Snake Load()
+        {
+            Snake res = null;
+            string fname = @"snake.xml";
+
+            using (FileStream fs = new FileStream(fname, FileMode.Open, FileAccess.Read))
+            {
+                XmlSerializer xs = new XmlSerializer(typeof(Snake));
+                res = xs.Deserialize(fs) as Snake;
+            }
+            return res;
         }
 
         public void Draw()
         {
+            DrawScore();
             Console.ForegroundColor = color;
             for (int i = 0; i < body.Count; i++)
             {
@@ -63,7 +87,25 @@ namespace SNAKEEE
                     Console.ForegroundColor = color;
                     Console.SetCursorPosition(body[i].x, body[i].y);
                     Console.Write(sign);
+            }
+        }
 
+        private void DrawScore()
+        {
+            Console.SetCursorPosition(35, 25);
+            Console.Write("Score: " + (score - 1) + "    ");
+
+            Console.SetCursorPosition(35, 27);
+            Console.Write("Speed: " + (11 - (Program.speed/20)) + "    ");
+        }
+
+        public void Clear()
+        {
+            Console.ForegroundColor = ConsoleColor.Black;
+            for (int i = 0; i < body.Count; i++)
+            {
+                Console.SetCursorPosition(body[i].x, body[i].y);
+                Console.Write(' ');
             }
         }
 

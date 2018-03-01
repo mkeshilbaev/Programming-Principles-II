@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FCC1051D-7A02-4EC2-835C-544980FE4F32}</ProjectGuid>
+    <ProjectGuid>{1A44CCD1-36AB-44AD-B2B2-AAF1CE3F532C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SNAKEEE</RootNamespace>
-    <AssemblyName>SNAKEEE</AssemblyName>
+    <RootNamespace>WorkWithStreams</RootNamespace>
+    <AssemblyName>WorkWithStreams</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Food.cs" />
-    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Snake.cs" />
-    <Compile Include="Wall.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

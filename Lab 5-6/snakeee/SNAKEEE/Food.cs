@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace SNAKEEE
 {
-   // [Serializable]
-    class Food
+
+    public class Food
     {
         public int x, y;
         public Food()
@@ -24,18 +24,20 @@ namespace SNAKEEE
 
         public void SetRandomPos()
         {
-            x = new Random().Next(1, Console.WindowWidth - 1);
-            y = new Random().Next(5, Console.WindowHeight - 1);
+            x = new Random().Next(1, 78);
+            y = new Random().Next(1, 20);
         }
 
         public bool Foodonwall(Wall w)
         {
             foreach (Point p in w.body)
             {
-                if (p.x == x && p.y == y)
-                    return false;
+                if (p.x == this.x && p.y == this.y)
+                {
+                    return true;
+                }
             }
-            return true;
+            return false;
         }
 
         public bool Foodonsnake(Snake s)
@@ -52,7 +54,7 @@ namespace SNAKEEE
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(x, y);
-            Console.Write("@");
+            Console.WriteLine("@");
         }
     }
 }
