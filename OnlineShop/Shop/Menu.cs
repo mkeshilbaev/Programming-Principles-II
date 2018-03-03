@@ -24,6 +24,7 @@ namespace Shop
             Console.SetCursorPosition(0, 0);
             ConsoleKeyInfo button = new ConsoleKeyInfo();
             bool quit = false;
+
             while (!quit)
             {
                 Draw();
@@ -74,8 +75,6 @@ namespace Shop
                     default:
                         break;
                 }
-
-
             }
         }
 
@@ -106,15 +105,17 @@ namespace Shop
             Console.Write("Basket: " + Product.Basket + " items");
             int posX = 40, posY = 10;
             Console.SetCursorPosition(posX, posY);
+
             for (int i = 0; i < ItemsCount; i++)
             {
-
                 Console.SetCursorPosition(posX, posY + i);
                 Console.Write("│");
+
                 if (selectedItem == i)
                 {
                     Console.ForegroundColor = selectedColor;
                 }
+
                 else
                 {
                     Console.ForegroundColor = unselectedColor;

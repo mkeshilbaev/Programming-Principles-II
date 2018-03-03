@@ -14,9 +14,9 @@ namespace Shop
                           "    Back        "};
 
         int[] itemsPrice =
-                         {95000,
-                          7990,
-                          9800,
+                         {21990,
+                          14990,
+                          17870,
                           0};
 
         int ItemsCount = 4;
