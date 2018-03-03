@@ -8,11 +8,15 @@ namespace Mid2
 {
     public class Point
     {
-        public int x, y;
-        public Point(int _x, int _y)
+        public int X { get; set; }
+        public int Y { get; set; }
+
+        public Point(){}
+
+        public Point(int x, int y)
         {
-            x = _x;
-            y = _y;
+            this.X = x;
+            this.Y = y;
         }
     }
 }

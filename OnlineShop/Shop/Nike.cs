@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace Shop
 {
-    class Puma
+    public class Nike
     {
-        string[] items = {"    Adidas   ",
-                          "    Nike     ",
-                          "    Puma     ",
-                          "    Quit     "};
+        string[] items = {"    Sneakers    ",
+                          "    T-Shirt     ",
+                          "    Trousers    ",
+                          "    Back        "};
+
+        int[] itemsPrice =
+                         {95000,
+                          7990,
+                          9800,
+                          0};
 
         int ItemsCount = 4;
         int selectedItem = 0;
@@ -48,18 +54,19 @@ namespace Shop
                             switch (selectedItem)
                             {
                                 case 0:
-                                    {
-                                        Adidas();
-                                        break;
-                                    }
                                 case 1:
-                                    {
-                                        Nike();
-                                        break;
-                                    }
                                 case 2:
                                     {
-                                        Puma();
+                                        if (Product.Money >= itemsPrice[selectedItem])
+                                        {
+                                            Product.Show(items[selectedItem]);
+                                            Product.Money -= itemsPrice[selectedItem];
+                                            Product.Basket++;
+                                        }
+                                        else
+                                        {
+                                            Product.CannotBuy();
+                                        }
                                         break;
                                     }
                                 case 3:
@@ -79,25 +86,12 @@ namespace Shop
             }
         }
 
-        private void Puma()
-        {
-
-        }
-
-        private void Nike()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Adidas()
-        {
-            throw new NotImplementedException();
-        }
-
         void Draw()
         {
             Console.SetCursorPosition(60, 2);
-            Console.Write("Your curren budget is: " + Budget.Money);
+            Console.Write("Your curren budget is: " + Product.Money + " KZT");
+            Console.SetCursorPosition(75, 3);
+            Console.Write("Basket: " + Product.Basket + " items");
             int posX = 40, posY = 10;
             Console.SetCursorPosition(posX, posY);
             for (int i = 0; i < ItemsCount; i++)
@@ -117,7 +111,10 @@ namespace Shop
                 Console.Write(items[i]);
                 Console.ForegroundColor = unselectedColor;
                 Console.Write("│");
-
+                if (itemsPrice[i] != 0)
+                {
+                    Console.Write("   " + itemsPrice[i] + " KZT   ");
+                }
                 if (selectedItem == i)
                 {
                     Console.ForegroundColor = selectedColor;
@@ -125,6 +122,8 @@ namespace Shop
                     Console.Write(">>");
                     Console.ForegroundColor = unselectedColor;
                 }
+
+
             }
         }
     }
