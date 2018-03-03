@@ -39,39 +39,7 @@ namespace SNAKEEE
             sr.Close();
             fs.Close();
         }
-
-        /*
-        public void ReadLevel(int level)
-        {
-            StreamReader sr = new StreamReader(@"C:\Users\mkesh\Desktop\PP2\snakeee\SNAKEEE\level" + level + ".txt");
-            string s = sr.ReadToEnd();
-            Console.Write(s);
-            sr.Close();
-
-            /*
-            try
-            {
-                int n = int.Parse(sr.ReadLine());
-                for (int i = 0; i < n; i++)
-                {
-                    string s = sr.ReadLine();
-                    for (int j = 0; j < s.Length; j++)
-                        if (s[j] == '*')
-                            body.Add(new Point(j, i));
-                }
-
-            }
-            catch (Exception e)
-            {
-                //Console.WriteLine(e.ToString());
-            }
-            finally
-            {
-                sr.Close();
-            }         
-            *
-        }
-        */
+    
         public Wall(int level)
         {
             body = new List<Point>();
@@ -81,8 +49,7 @@ namespace SNAKEEE
         }
 
         public void Draw()
-        {     
-            
+        {              
             foreach (Point p in body)
             {
                 Console.SetCursorPosition(p.x, p.y);

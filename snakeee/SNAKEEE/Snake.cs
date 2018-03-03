@@ -51,25 +51,19 @@ namespace SNAKEEE
 
         public void Save()
         {
-            string fname = @"snake.xml";
-
-            using (FileStream fs = new FileStream(fname, FileMode.OpenOrCreate, FileAccess.ReadWrite))
-            {
-                XmlSerializer xs = new XmlSerializer(typeof(Snake));
-                xs.Serialize(fs, this);
-            }
+            XmlSerializer xs = new XmlSerializer(typeof(Snake));
+            FileStream fs = new FileStream("snake.xml", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            xs.Serialize(fs, this);
+            fs.Close();
         }
 
         public static Snake Load()
         {
             Snake res = null;
-            string fname = @"snake.xml";
-
-            using (FileStream fs = new FileStream(fname, FileMode.Open, FileAccess.Read))
-            {
-                XmlSerializer xs = new XmlSerializer(typeof(Snake));
-                res = xs.Deserialize(fs) as Snake;
-            }
+            XmlSerializer xs = new XmlSerializer(typeof(Snake));
+            FileStream fs = new FileStream("snake.xml", FileMode.Open, FileAccess.Read);
+            res = xs.Deserialize(fs) as Snake; ;
+            fs.Close();
             return res;
         }
 
