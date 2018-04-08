@@ -8,15 +8,272 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Calculator
+namespace CALCULATOR
 {
-    public partial class Calculator : Form
+    public partial class Form1 : Form
     {
-        public Calculator()
+        Double value = 0, b = 0;
+        String operation = "";
+        bool operation_pressed = false;
+        double memory = 0;
+        double result = 0;
+        public int cnt = 0;
+        
+        public Form1()
         {
             InitializeComponent();
         }
 
-        
+        private void button_CLick(object sender, EventArgs e)
+        {
+            /*Button btn = sender as Button;
+            if (btn.Text == ",")
+            {
+                if (!textBox1.Text.Contains(","))
+                {
+                    operation_pressed = true;
+                    textBox1.Text = textBox1.Text + btn.Text;
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                if (textBox1.Text == "0" || operation_pressed || result)
+                {
+                    textBox1.Clear();
+                    result = false;
+                }
+                operation_pressed = false;
+                textBox1.Text = textBox1.Text + btn.Text;              
+            }
+         */
+            if ((textBox1.Text == "0") || (operation_pressed))
+                textBox1.Clear();
+
+            operation_pressed = false;
+            Button btn = sender as Button;
+
+            if (btn.Text == ",")
+            {
+                if (!textBox1.Text.Contains(","))
+                {
+                    textBox1.Text = textBox1.Text + btn.Text;
+                    if (result == 0 || textBox1.Text == "0" || textBox1.Text=="")
+                    {
+                        textBox1.Text = "0" + btn.Text;
+                        
+                    }
+                }
+                
+            }
+            
+            else
+            textBox1.Text = textBox1.Text + btn.Text;
+            result = double.Parse(textBox1.Text);          
+        }
+    
+        private void clearAll_Click(object sender, EventArgs e)
+        {     
+            textBox1.Text = "0";
+            result = 0;
+            value = 0;
+            label1.Text = "";
+        }
+
+        private void clearEntry_Click(object sender, EventArgs e)
+        {
+           /* textBox1.Clear();
+            value = 0;
+            textBox1.Text = "0";
+            */
+        }
+
+        private void clearLastDigit_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+            }
+        }
+
+        private void operator_click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;         
+
+            if (value != 0)
+            {
+                equal.PerformClick();
+                operation_pressed = true;
+                operation = btn.Text;
+            }
+            else
+            {
+                operation = btn.Text;
+                //value = Double.Parse(textBox1.Text);
+                value = result;
+                operation_pressed = true;
+            }
+            if (operation_pressed == true)
+            {
+                if (result == 0)
+                {
+                    label1.Text = value + " " + operation;
+                }
+                else
+                {
+                    label1.Text = result + " " + operation;
+                }
+                
+            }
+            
+
+        }
+        private void equal_Click(object sender, EventArgs e)
+        {
+            label1.Text = "";
+            b = Double.Parse(textBox1.Text);
+            switch (operation)
+            {
+
+                case "+":
+                    operation_pressed = true;
+                    //textBox1.Text = (value + Double.Parse(textBox1.Text)).ToString();
+                    result = value + b;
+                    if (result != 0)
+                    {
+                        label1.Text = result + "";
+                    }
+                    else
+                    {
+                        label1.Text = "";
+                    }
+                    break;
+
+                case "-":
+                    operation_pressed = true;
+                    textBox1.Text = (value - Double.Parse(textBox1.Text)).ToString();
+                    
+                    result = value - b;
+                    if (result != 0)
+                    {
+                        label1.Text = result + "";
+                    }
+                    else
+                    {
+                        label1.Text = "";
+                    }
+                    break;
+
+                case "×":
+                    operation_pressed = true;
+                    textBox1.Text = (value * Double.Parse(textBox1.Text)).ToString();
+                    
+                    result = value * b;
+                    if (result != 0)
+                    {
+                        label1.Text = result + "";
+                    }
+                    else
+                    {
+                        label1.Text = "";
+                    }
+                    break;
+
+                case "÷":
+                    operation_pressed = true;
+                    textBox1.Text = (value / Double.Parse(textBox1.Text)).ToString();
+                    result = value / b;
+                    if (result != 0)
+                    {
+                        label1.Text = result + "";
+                    }
+                    else
+                    {
+                        label1.Text = "";
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+
+            operation_pressed = false;
+        }
+
+        private void percent_Click(object sender, EventArgs e)
+        {
+            double n = value * (double.Parse(textBox1.Text) / 100);
+            textBox1.Text = (value + n).ToString();
+        }
+
+        private void root_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            textBox1.Text = (Math.Sqrt(n)).ToString();
+            label1.Text += "√(" + n + ")";
+        }
+
+        private void square_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            textBox1.Text = (Math.Pow(n, 2)).ToString();
+            label1.Text += "sqr(" + n + ")";
+        }
+
+        private void rational_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            textBox1.Text = (1 / n).ToString();
+            label1.Text += "1/(" + n + ")";
+        }
+
+        private void plusminus_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);                 
+                textBox1.Text = (-1 * n).ToString();
+        }
+
+        private void memoryStore_Click(object sender, EventArgs e)
+        {
+            memory = double.Parse(textBox1.Text);
+            textBox1.Text = "";
+        }
+
+        private void memoryRecall_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = memory.ToString();
+        }
+
+        private void MemoryAdd_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            memory = memory + n;
+            textBox1.Text = memory.ToString();
+
+         /*   double m = double.Parse(textBox1.Text);
+            double n = double.Parse(memory.ToString());
+            memory = (n + m).ToString();
+            */
+        }
+
+        private void memorySubtract_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            memory = memory - n;
+            // textBox1.Text = memory.ToString();
+            textBox1.Text = "";
+        }
+
+        private void memoryClear_Click(object sender, EventArgs e)
+        {
+            memory = 0;
+        }
     }
-}
+}   
+
+        
+    
+ 

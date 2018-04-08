@@ -77,6 +77,7 @@
             resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -214,6 +215,7 @@
             resources.ApplyResources(this.button20, "button20");
             this.button20.Name = "button20";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
             // 
@@ -302,9 +304,12 @@
             // 
             // trackBar1
             // 
+            this.trackBar1.LargeChange = 2;
             resources.ApplyResources(this.trackBar1, "trackBar1");
+            this.trackBar1.Maximum = 30;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
             // Paint
             // 

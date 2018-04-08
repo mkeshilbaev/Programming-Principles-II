@@ -144,7 +144,7 @@
     <value>Stretch</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 37</value>
+    <value>23, 12</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -188,7 +188,7 @@
     <value>Stretch</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 37</value>
+    <value>59, 12</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -209,7 +209,7 @@
     <value>30</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>740, 73</value>
+    <value>741, 48</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -230,7 +230,7 @@
     <value>29</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>812, 39</value>
+    <value>813, 12</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -251,7 +251,7 @@
     <value>28</value>
   </data>
   <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>848, 37</value>
+    <value>849, 12</value>
   </data>
   <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -272,7 +272,7 @@
     <value>27</value>
   </data>
   <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>740, 37</value>
+    <value>741, 12</value>
   </data>
   <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -293,7 +293,7 @@
     <value>24</value>
   </data>
   <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>812, 73</value>
+    <value>813, 48</value>
   </data>
   <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -314,7 +314,7 @@
     <value>25</value>
   </data>
   <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>776, 73</value>
+    <value>777, 48</value>
   </data>
   <data name="button8.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -335,10 +335,10 @@
     <value>26</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 122</value>
+    <value>3, 102</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1143, 586</value>
+    <value>1143, 606</value>
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -383,7 +383,7 @@
     <value>Stretch</value>
   </data>
   <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 73</value>
+    <value>23, 48</value>
   </data>
   <data name="button9.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -426,7 +426,7 @@
     <value>Stretch</value>
   </data>
   <data name="button10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 37</value>
+    <value>95, 12</value>
   </data>
   <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -474,7 +474,7 @@
     <value>Stretch</value>
   </data>
   <data name="button11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 73</value>
+    <value>95, 48</value>
   </data>
   <data name="button11.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -518,7 +518,7 @@
     <value>Stretch</value>
   </data>
   <data name="button12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 73</value>
+    <value>59, 48</value>
   </data>
   <data name="button12.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -539,7 +539,7 @@
     <value>20</value>
   </data>
   <data name="button13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>920, 75</value>
+    <value>920, 48</value>
   </data>
   <data name="button13.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -560,7 +560,7 @@
     <value>13</value>
   </data>
   <data name="button14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>920, 39</value>
+    <value>920, 12</value>
   </data>
   <data name="button14.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -581,7 +581,7 @@
     <value>14</value>
   </data>
   <data name="button15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>884, 73</value>
+    <value>884, 48</value>
   </data>
   <data name="button15.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -602,7 +602,7 @@
     <value>15</value>
   </data>
   <data name="button16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>956, 39</value>
+    <value>956, 12</value>
   </data>
   <data name="button16.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -623,7 +623,7 @@
     <value>16</value>
   </data>
   <data name="button17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>848, 73</value>
+    <value>848, 48</value>
   </data>
   <data name="button17.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -644,7 +644,7 @@
     <value>17</value>
   </data>
   <data name="button18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>884, 37</value>
+    <value>884, 12</value>
   </data>
   <data name="button18.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -680,7 +680,7 @@
     <value>Stretch</value>
   </data>
   <data name="button20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 73</value>
+    <value>227, 48</value>
   </data>
   <data name="button20.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -711,7 +711,7 @@
     <value>Stretch</value>
   </data>
   <data name="button21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 73</value>
+    <value>191, 48</value>
   </data>
   <data name="button21.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -746,7 +746,7 @@
     <value>Stretch</value>
   </data>
   <data name="button22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 37</value>
+    <value>227, 12</value>
   </data>
   <data name="button22.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -778,7 +778,7 @@
     <value>Stretch</value>
   </data>
   <data name="button24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 37</value>
+    <value>191, 12</value>
   </data>
   <data name="button24.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -799,7 +799,7 @@
     <value>12</value>
   </data>
   <data name="button25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1064, 73</value>
+    <value>1064, 48</value>
   </data>
   <data name="button25.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -820,7 +820,7 @@
     <value>1</value>
   </data>
   <data name="button26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1028, 73</value>
+    <value>1028, 48</value>
   </data>
   <data name="button26.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -841,7 +841,7 @@
     <value>2</value>
   </data>
   <data name="button27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>992, 73</value>
+    <value>992, 48</value>
   </data>
   <data name="button27.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -862,7 +862,7 @@
     <value>3</value>
   </data>
   <data name="button28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>776, 37</value>
+    <value>777, 12</value>
   </data>
   <data name="button28.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -883,7 +883,7 @@
     <value>4</value>
   </data>
   <data name="button29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1064, 39</value>
+    <value>1064, 12</value>
   </data>
   <data name="button29.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -904,7 +904,7 @@
     <value>5</value>
   </data>
   <data name="button30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1028, 39</value>
+    <value>1028, 12</value>
   </data>
   <data name="button30.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -925,7 +925,7 @@
     <value>6</value>
   </data>
   <data name="button31.Location" type="System.Drawing.Point, System.Drawing">
-    <value>956, 73</value>
+    <value>956, 48</value>
   </data>
   <data name="button31.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -946,7 +946,7 @@
     <value>7</value>
   </data>
   <data name="button32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>992, 39</value>
+    <value>992, 12</value>
   </data>
   <data name="button32.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -967,7 +967,7 @@
     <value>8</value>
   </data>
   <data name="trackBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>414, 60</value>
+    <value>354, 22</value>
   </data>
   <data name="trackBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 56</value>
