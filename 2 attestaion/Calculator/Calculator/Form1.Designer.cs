@@ -482,11 +482,12 @@
             // memorySubtract
             // 
             this.memorySubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.memorySubtract.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.memorySubtract.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.memorySubtract.ForeColor = System.Drawing.Color.White;
-            this.memorySubtract.Location = new System.Drawing.Point(231, 225);
+            this.memorySubtract.Location = new System.Drawing.Point(231, 227);
             this.memorySubtract.Name = "memorySubtract";
-            this.memorySubtract.Size = new System.Drawing.Size(82, 48);
+            this.memorySubtract.Size = new System.Drawing.Size(82, 43);
             this.memorySubtract.TabIndex = 31;
             this.memorySubtract.Text = "M-";
             this.memorySubtract.UseVisualStyleBackColor = false;

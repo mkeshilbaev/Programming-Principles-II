@@ -17,8 +17,7 @@ namespace CALCULATOR
         bool operation_pressed = false;
         double memory = 0;
         double result = 0;
-        public int cnt = 0;
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -26,30 +25,6 @@ namespace CALCULATOR
 
         private void button_CLick(object sender, EventArgs e)
         {
-            /*Button btn = sender as Button;
-            if (btn.Text == ",")
-            {
-                if (!textBox1.Text.Contains(","))
-                {
-                    operation_pressed = true;
-                    textBox1.Text = textBox1.Text + btn.Text;
-                }
-                else
-                {
-
-                }
-            }
-            else
-            {
-                if (textBox1.Text == "0" || operation_pressed || result)
-                {
-                    textBox1.Clear();
-                    result = false;
-                }
-                operation_pressed = false;
-                textBox1.Text = textBox1.Text + btn.Text;              
-            }
-         */
             if ((textBox1.Text == "0") || (operation_pressed))
                 textBox1.Clear();
 
@@ -61,15 +36,13 @@ namespace CALCULATOR
                 if (!textBox1.Text.Contains(","))
                 {
                     textBox1.Text = textBox1.Text + btn.Text;
+
                     if (result == 0 || textBox1.Text == "0" || textBox1.Text=="")
                     {
-                        textBox1.Text = "0" + btn.Text;
-                        
+                        textBox1.Text = "0" + btn.Text;                      
                     }
-                }
-                
-            }
-            
+                }                
+            }         
             else
             textBox1.Text = textBox1.Text + btn.Text;
             result = double.Parse(textBox1.Text);          
@@ -112,8 +85,7 @@ namespace CALCULATOR
             else
             {
                 operation = btn.Text;
-                //value = Double.Parse(textBox1.Text);
-                a = result;
+                a = Double.Parse(textBox1.Text);
                 operation_pressed = true;
             }
             if (operation_pressed == true)
@@ -125,23 +97,22 @@ namespace CALCULATOR
                 else
                 {
                     label1.Text = result + " " + operation;
-                }
-                
+                }                
             }
-            
-
         }
         private void equal_Click(object sender, EventArgs e)
         {
             label1.Text = "";
             b = Double.Parse(textBox1.Text);
+
             switch (operation)
             {
-
                 case "+":
                     operation_pressed = true;
-                    //textBox1.Text = (value + Double.Parse(textBox1.Text)).ToString();
                     result = a + b;
+                    textBox1.Text = Convert.ToString(result);
+                    a = result;
+
                     if (result != 0)
                     {
                         label1.Text = result + "";
@@ -154,9 +125,10 @@ namespace CALCULATOR
 
                 case "-":
                     operation_pressed = true;
-                    textBox1.Text = (a - Double.Parse(textBox1.Text)).ToString();
-                    
                     result = a - b;
+                    textBox1.Text = Convert.ToString(result);
+                    a = result;
+                    
                     if (result != 0)
                     {
                         label1.Text = result + "";
@@ -169,9 +141,10 @@ namespace CALCULATOR
 
                 case "×":
                     operation_pressed = true;
-                    textBox1.Text = (a * Double.Parse(textBox1.Text)).ToString();
-                    
                     result = a * b;
+                    textBox1.Text = Convert.ToString(result);
+                    a = result;
+                   
                     if (result != 0)
                     {
                         label1.Text = result + "";
@@ -183,9 +156,16 @@ namespace CALCULATOR
                     break;
 
                 case "÷":
-                    operation_pressed = true;
-                    textBox1.Text = (a / Double.Parse(textBox1.Text)).ToString();
-                    result = a / b;
+                    operation_pressed = true;                 
+                    if (b != 0)
+                    {
+                        result = a / b;
+                        textBox1.Text = Convert.ToString(result);
+                        a = result;
+                    }
+                    
+                    else textBox1.Text = "impossible";
+
                     if (result != 0)
                     {
                         label1.Text = result + "";
@@ -199,14 +179,13 @@ namespace CALCULATOR
                 default:
                     break;
             }
-
             operation_pressed = false;
         }
 
         private void percent_Click(object sender, EventArgs e)
         {
-            double n = a * (double.Parse(textBox1.Text) / 100);
-            textBox1.Text = (a + n).ToString();
+            Double n = a * (double.Parse(textBox1.Text) / 100);
+            textBox1.Text = (n).ToString();
         }
 
         private void root_Click(object sender, EventArgs e)
@@ -240,30 +219,26 @@ namespace CALCULATOR
         {
             memory = double.Parse(textBox1.Text);
             textBox1.Text = "";
+            label1.Text = "";
         }
 
         private void memoryRecall_Click(object sender, EventArgs e)
         {
             textBox1.Text = memory.ToString();
+            label1.Text = "";
         }
 
         private void MemoryAdd_Click(object sender, EventArgs e)
         {
             double n = Double.Parse(textBox1.Text);
             memory = memory + n;
-            textBox1.Text = memory.ToString();
-
-         /*   double m = double.Parse(textBox1.Text);
-            double n = double.Parse(memory.ToString());
-            memory = (n + m).ToString();
-            */
+            textBox1.Text ="";
         }
 
         private void memorySubtract_Click(object sender, EventArgs e)
         {
             double n = Double.Parse(textBox1.Text);
             memory = memory - n;
-            // textBox1.Text = memory.ToString();
             textBox1.Text = "";
         }
 
