@@ -12,7 +12,7 @@ namespace CALCULATOR
 {
     public partial class Form1 : Form
     {
-        Double value = 0, b = 0;
+        Double a = 0, b = 0;
         String operation = "";
         bool operation_pressed = false;
         double memory = 0;
@@ -79,7 +79,7 @@ namespace CALCULATOR
         {     
             textBox1.Text = "0";
             result = 0;
-            value = 0;
+            a = 0;
             label1.Text = "";
         }
 
@@ -103,7 +103,7 @@ namespace CALCULATOR
         {
             Button btn = sender as Button;         
 
-            if (value != 0)
+            if (a != 0)
             {
                 equal.PerformClick();
                 operation_pressed = true;
@@ -113,14 +113,14 @@ namespace CALCULATOR
             {
                 operation = btn.Text;
                 //value = Double.Parse(textBox1.Text);
-                value = result;
+                a = result;
                 operation_pressed = true;
             }
             if (operation_pressed == true)
             {
                 if (result == 0)
                 {
-                    label1.Text = value + " " + operation;
+                    label1.Text = a + " " + operation;
                 }
                 else
                 {
@@ -141,7 +141,7 @@ namespace CALCULATOR
                 case "+":
                     operation_pressed = true;
                     //textBox1.Text = (value + Double.Parse(textBox1.Text)).ToString();
-                    result = value + b;
+                    result = a + b;
                     if (result != 0)
                     {
                         label1.Text = result + "";
@@ -154,9 +154,9 @@ namespace CALCULATOR
 
                 case "-":
                     operation_pressed = true;
-                    textBox1.Text = (value - Double.Parse(textBox1.Text)).ToString();
+                    textBox1.Text = (a - Double.Parse(textBox1.Text)).ToString();
                     
-                    result = value - b;
+                    result = a - b;
                     if (result != 0)
                     {
                         label1.Text = result + "";
@@ -169,9 +169,9 @@ namespace CALCULATOR
 
                 case "×":
                     operation_pressed = true;
-                    textBox1.Text = (value * Double.Parse(textBox1.Text)).ToString();
+                    textBox1.Text = (a * Double.Parse(textBox1.Text)).ToString();
                     
-                    result = value * b;
+                    result = a * b;
                     if (result != 0)
                     {
                         label1.Text = result + "";
@@ -184,8 +184,8 @@ namespace CALCULATOR
 
                 case "÷":
                     operation_pressed = true;
-                    textBox1.Text = (value / Double.Parse(textBox1.Text)).ToString();
-                    result = value / b;
+                    textBox1.Text = (a / Double.Parse(textBox1.Text)).ToString();
+                    result = a / b;
                     if (result != 0)
                     {
                         label1.Text = result + "";
@@ -205,8 +205,8 @@ namespace CALCULATOR
 
         private void percent_Click(object sender, EventArgs e)
         {
-            double n = value * (double.Parse(textBox1.Text) / 100);
-            textBox1.Text = (value + n).ToString();
+            double n = a * (double.Parse(textBox1.Text) / 100);
+            textBox1.Text = (a + n).ToString();
         }
 
         private void root_Click(object sender, EventArgs e)
