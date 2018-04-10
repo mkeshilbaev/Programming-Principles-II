@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Threading;
 
 namespace Paint
 {
@@ -29,11 +30,12 @@ namespace Paint
             ELLIPSE,
             TRIANGLE,
             FILL,
-            ERASER
+            ERASER,
+            PIPETTE
         };
 
         Tool tool;
-        private Color currentColor;
+        public Color currentColor = Color.Black;
 
         public Paint()
         {
@@ -44,32 +46,33 @@ namespace Paint
             pen = new Pen(Color.Black, 2);
             tool = Tool.PEN;
             clicked = false;
-            Queue<Point> q = new Queue<Point>();
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
         }
 
-        private void Check(int x, int y)
+        private void Paint_Load(object sender, EventArgs e)
         {
-
-            if (cur.X < 0 || cur.Y < 0 || cur.X >= pictureBox1.Width || cur.Y >= pictureBox1.Height)
-                return;
-            if (bmp.GetPixel(x, y) != initcolor)
-                return;
-            q.Enqueue(new Point(x, y));
+            bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            pictureBox1.Image = bmp;
+            g = Graphics.FromImage(bmp);
+            pen = new Pen(Color.Black, 2);
+            tool = Tool.PEN;
+            pictureBox1.BackColor = Color.White;
+            clicked = false;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            pen.StartCap = LineCap.Round;
+            pen.EndCap = LineCap.Round;
         }
 
-        public void Fill(Point p)
-        {          
-            while (q.Count != 0)
+        public void Check(int x, int y)
+        {
+            if (x < 0 || x >= bmp.Width || y < 0 || y >= bmp.Height)
+                return;
+
+            if (bmp.GetPixel(x, y) == initcolor)
             {
-                Point curPoint = q.Dequeue();
-                bmp.SetPixel(curPoint.X, curPoint.Y, fillcolor);
-                pictureBox1.Refresh();
-                Check(curPoint.X - 1, curPoint.Y);
-                Check(curPoint.X, curPoint.Y - 1);
-                Check(curPoint.X + 1, curPoint.Y);
-                Check(curPoint.X, curPoint.Y + 1);
-            }
+                bmp.SetPixel(x, y, currentColor);
+                q.Enqueue(new Point(x, y));
+            }         
         }
 
         private void Paint_MouseDown(object sender, MouseEventArgs e)
@@ -79,7 +82,26 @@ namespace Paint
 
             if (tool == Tool.FILL)
             {
-              Fill(e.Location);
+                int x = e.X;
+                int y = e.Y;
+                initcolor = bmp.GetPixel(x, y);
+                q.Enqueue(new Point(x, y));
+                bmp.SetPixel(x, y, currentColor);
+                q.Enqueue(e.Location);
+                while(q.Count != 0)
+                {
+                    Point p = q.Dequeue();
+                    Check(p.X - 1, p.Y);
+                    Check(p.X + 1, p.Y);
+                    Check(p.X, p.Y - 1);
+                    Check(p.X, p.Y + 1);
+                }
+                pictureBox1.Refresh();
+            }
+            if (tool == Tool.PIPETTE)
+            {
+                currentColor = bmp.GetPixel(e.X, e.Y);
+                pictureBox2.BackColor = currentColor;
             }
         }
 
@@ -189,6 +211,11 @@ namespace Paint
             tool = Tool.TRIANGLE;
         }
 
+        private void button12_Click(object sender, EventArgs e)
+        {
+            tool = Tool.PIPETTE;
+        }
+
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             clicked = true;
@@ -204,13 +231,14 @@ namespace Paint
             Button btn = sender as Button;
             pen.Color = btn.BackColor;
             currentColor = btn.BackColor;
-        }
+            pictureBox2.BackColor = currentColor;
+        }       
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-
-            if (tool == Tool.RRECTANGLE /*&& clicked == true*/)
+          /*  
+            if (tool == Tool.RRECTANGLE)
             {
                 int x = Math.Min(prev.X, cur.X);
                 int y = Math.Min(prev.Y, cur.Y);
@@ -218,17 +246,8 @@ namespace Paint
                 int h = Math.Abs(prev.Y - cur.Y);
                 e.Graphics.DrawRectangle(pen, x, y, w, h);             
             }
-
-            if (tool == Tool.LINE && clicked == true)
-            {
-                int x1 = Math.Min(prev.X, cur.X);
-                int y1 = Math.Min(prev.Y, cur.Y);
-                int x2 = Math.Abs(prev.X - cur.X);
-                int y2 = Math.Abs(prev.Y - cur.Y);
-                e.Graphics.DrawLine(pen, x1, y1, x2, y2);
-            }
-
-            if (tool == Tool.ELLIPSE && clicked == true)
+          
+            if (tool == Tool.ELLIPSE)
             {
                 int x = Math.Min(prev.X, cur.X);
                 int y = Math.Min(prev.Y, cur.Y);
@@ -236,15 +255,16 @@ namespace Paint
                 int h = Math.Abs(prev.Y - cur.Y);
                 e.Graphics.DrawEllipse(pen, x, y, w, h);
             }
-
-            if (tool == Tool.FILL && clicked == true)
+            
+            if (tool == Tool.LINE)
             {
-                Point curPoint = q.Dequeue();
-                bmp.SetPixel(cur.X, cur.Y, fillcolor);
-                pictureBox1.Refresh();
+                int x1 = Math.Min(prev.X, cur.X);
+                int y1 = Math.Min(prev.Y, cur.Y);
+                int x2 = Math.Abs(prev.X - cur.X);
+                int y2 = Math.Abs(prev.Y - cur.Y);
+                e.Graphics.DrawLine(pen, x1, y1, x2, y2);
             }
-
+            */
         }
-
     }
 }
