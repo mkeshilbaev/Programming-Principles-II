@@ -31,7 +31,8 @@ namespace Paint
             TRIANGLE,
             FILL,
             ERASER,
-            PIPETTE
+            PIPETTE,
+            clearAll           
         };
 
         Tool tool;
@@ -139,7 +140,7 @@ namespace Paint
                 g.DrawRectangle(pen, x, y, w, h);
             }
             
-            pictureBox1.Refresh();
+           // pictureBox1.Refresh();
             
             if(tool == Tool.TRIANGLE)
             {
@@ -154,7 +155,7 @@ namespace Paint
                 int y2 = Math.Abs(prev.Y - cur.Y);
                 g.DrawLine(pen, prev.X, prev.Y, e.Location.X, e.Location.Y);
             }
-            pictureBox1.Refresh();
+          //  pictureBox1.Refresh();
 
             if (tool == Tool.ELLIPSE)
             {
@@ -216,6 +217,14 @@ namespace Paint
             tool = Tool.PIPETTE;
         }
 
+        private void clearAll_Click(object sender, EventArgs e)
+        {
+            tool = Tool.clearAll;
+            g.Clear(Color.White);
+            pictureBox1.Refresh();
+
+        }
+
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             clicked = true;
@@ -237,34 +246,38 @@ namespace Paint
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-          /*  
-            if (tool == Tool.RRECTANGLE)
+            if (clicked)
             {
-                int x = Math.Min(prev.X, cur.X);
-                int y = Math.Min(prev.Y, cur.Y);
-                int w = Math.Abs(prev.X - cur.X);
-                int h = Math.Abs(prev.Y - cur.Y);
-                e.Graphics.DrawRectangle(pen, x, y, w, h);             
+                switch (tool)
+                {
+                    case Tool.PEN:
+                        break;
+                    case Tool.RRECTANGLE:
+                        int x = Math.Min(prev.X, cur.X);
+                        int y = Math.Min(prev.Y, cur.Y);
+                        int w = Math.Abs(prev.X - cur.X);
+                        int h = Math.Abs(prev.Y - cur.Y);
+                        e.Graphics.DrawRectangle(pen, x, y, w, h);
+                        break;
+                    case Tool.LINE:
+                        break;
+                    case Tool.ELLIPSE:
+                        break;
+                    case Tool.TRIANGLE:
+                        break;
+                    case Tool.FILL:
+                        break;
+                    case Tool.ERASER:
+                        break;
+                    case Tool.PIPETTE:
+                        break;
+                    case Tool.clearAll:
+                        break;
+                    default:
+                        break;
+                }
             }
-          
-            if (tool == Tool.ELLIPSE)
-            {
-                int x = Math.Min(prev.X, cur.X);
-                int y = Math.Min(prev.Y, cur.Y);
-                int w = Math.Abs(prev.X - cur.X);
-                int h = Math.Abs(prev.Y - cur.Y);
-                e.Graphics.DrawEllipse(pen, x, y, w, h);
-            }
-            
-            if (tool == Tool.LINE)
-            {
-                int x1 = Math.Min(prev.X, cur.X);
-                int y1 = Math.Min(prev.Y, cur.Y);
-                int x2 = Math.Abs(prev.X - cur.X);
-                int y2 = Math.Abs(prev.Y - cur.Y);
-                e.Graphics.DrawLine(pen, x1, y1, x2, y2);
-            }
-            */
+
         }
     }
 }

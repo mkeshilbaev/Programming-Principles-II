@@ -163,7 +163,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>31</value>
   </data>
   <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -206,10 +206,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>30</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>741, 48</value>
+    <value>688, 48</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -227,10 +227,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>29</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>813, 12</value>
+    <value>760, 12</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -248,10 +248,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>28</value>
   </data>
   <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>849, 12</value>
+    <value>796, 12</value>
   </data>
   <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -269,10 +269,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>27</value>
   </data>
   <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>741, 12</value>
+    <value>688, 12</value>
   </data>
   <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -290,10 +290,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>24</value>
   </data>
   <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>813, 48</value>
+    <value>760, 48</value>
   </data>
   <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -311,10 +311,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>25</value>
   </data>
   <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>777, 48</value>
+    <value>724, 48</value>
   </data>
   <data name="button8.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -332,7 +332,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>26</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 102</value>
@@ -353,7 +353,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>23</value>
   </data>
   <data name="button9.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -403,97 +403,6 @@
   <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
-  <data name="button10.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAAAvxJREFUSEu91GtIk2EUB3Apr31S+xxBQREEVpag6AfzlkvNnEmFpmWlmdlSkRKV
-        zExl5ZUUy8nUsjTdvNJlhTl1XqYzh2lZGFhsczODJDM1/r3Pu02bj9/SBj923uc55/zZGDP7L68NO8Ox
-        Hgzr9QH3O1S4J1WhvEuNym4NqvsmUduvRb1Ch4Y3OjQPTaFFqdfE1OJBHeoGtKiRT+Jh7yQqmBlBp5qh
-        QsGrL3QA7/EYIu/KEVm8AnN2ZhXG3rMrRJcOIPrBOzogqnIUJ3NlCM3rRlh+N04V9CC8sAcRBqeLeldY
-        vgtnekk/mSN1RPlbOiC0VImAm68RmNmOo7faEZTVDm6WFNxsKYKJHCmShAqE5XbhGFOzZwxyT/pIv35O
-        ipDiITogqFABj+QX8EohJPBOlcCHSJPgUNpL3BYNY/H3ItqUKvZZz9DDIP1kjtT+eQN0AIffB5f4Frgm
-        EK1wTWyF21/kY1qMTExjdm4evinPTe4IdoZBau/sXjrAM1MGxxgR9l8U4wARu8wv9RnmFxYQfEOCmdk5
-        XK/qN7lnGeacmNo9o4sOcE/vgMO5Guw5X0spEisx+EHL1k2ycfSMqKkeo70MtzQpHbA5ognWXsWrGv6k
-        A6+ona39rzWzn2bb8Qqqz4jsogPCxLB2L6Q4Rz1iF27llrHPmzyKoJmewdUSKdVrRHZRAfYn6mDldodS
-        WNuPn3O/IB9VLZn+/gOK9+pV+wmyiw4IqYGVS44JG1c+NF9nIGgcxIXsp0syBB3sT3ZfaDk1Q5BdVIAd
-        txqWTpkm/OL0X88W33yTcxvnLExovoFfKTM5NyK76IDAKlg6ppsQNirQJh+nzgm+sBMfP0+tekd2UQG2
-        /kJYOKSuCbKLDuAIYLE7eU2QXVSAPacM5ruS1gTZRQXY+ZTCfEfCmiC7qABbzxJs3M77Z+YMO68SOsD7
-        Uj08Y+vYd584EXwvi3D4CvNHF9+AgIQGHElsZAUw/Jlncs7hidk+0m+cJw7GPKED1oNh/Xq+zMz+ALQO
-        E9wn3zAhAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="button10.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="button10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 12</value>
-  </data>
-  <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
-  </data>
-  <data name="button10.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;button10.Name" xml:space="preserve">
-    <value>button10</value>
-  </data>
-  <data name="&gt;&gt;button10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button10.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button10.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="button11.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAABDJJREFUSEu1lWtMWmcYx3Wrm/2iS5PFNXFOs7molFpd0pkuqdtqVxtZZ5WhjlpT
-        Iw5nHVClrF7Qtt5AEJWLoqLMqYhXELFeMnVplrWLYLSUdooMoeAl0ngrzAMcd056Pi6WRvf78uR5/8//
-        efPmvXn8F2lpad4kEulUQUHBl3CMjY19G5EOBhaLfbe6urp2UKG01gklYAmzBWRx20CJtM/KYDBrYR0p
-        fX3i4uLCOzo6l7JvNbjQlyodyYV9AO724C6ePrAb/k3VbkoWyyVsbDbCdYjFfSIjI48LBPWmr9M5jgs5
-        nVs5bdPrTerljbsPzGuN6pV1kmTGcu56u/UsrgJgs2tMcD1idY/U1NQm4k2+49MM8fJN+dPH3DnrwqjF
-        Zi7UbKpGl18Y6jTW2aJhneoM8Rdj8g81Drgesb4aHx+fY8wq9uaJ+Grrt42qCdKURXb3ydZQvt6mIM7b
-        +/N0NnnJ061B4sSzzoTmmeFgTPVqaTlz09/f/xjSYn+CgoJiSpn1ro/wotnzkvnGq3+s824t2oSVZqC7
-        yARIy6BI19tEqQ+t3PPdC/UfX2ubzi3iukJDQ2OQFvsTHBycUljW4ESRBqYu3zMK6Qa7tMICtNeuOroa
-        1pz93DVnN5zTjXZpwqip/iRVMZaTz3OGhYWlIC32JyAgII7BEblQJNlU7LCJfe3JixKK/h9a0TPgxm0z
-        QIYjnMPjF0fNVSdpQ2MFpUIntPI4pMX+eHt7f1Bbx935jNz9KGbAwMZptnNJevv3dyzOqxUrzu/gCOdJ
-        mu0bXymWmBHXu9WcWsEO7ENavJI3ExMT5YWc/u0z9TPiy38+z8/W2YnlK048b92BhWP233ZiwvTGT2dF
-        c00/VvZt4HA4Oex7aXcDX1/fCB5fYCVyxgxfSOZ5SbOb1DzDLqHM4rwCx6RHO3nn+hZrrlSN6fplChc2
-        OfkSZPN86XYPT2gvEltaf35e1/tgLUE8p7gwtMTCTCzfuag0MTEtc/KKroerHZKe7X6ZDNRotSutra3j
-        WVlZ7yN+t/CE7sRpAiFzRHlv1KacVAPScfXO4K9qYHhk3JaZmTni5+d3OiMjI7+svBzQ/jUPTk5O6igU
-        Chrxu81bXl5eqMDAwFQ0Gk2CI5zD47AYEhLySXx8/Cr00oIzs3N7arV6lUajfQ5rhwZ0ySKgjTbl5uaC
-        v92/Dy7odNt0Oj0JkQ8H6KKF4fF4PZlM3lMolaDRaNplMBgUSHqtzd8XFAr1IfQ5aahUKtglle4tGY0u
-        Pp/PLC4uPoKUHBxoIe+lp6f/DjUFm0UicFGvB8VicRu0+UeRkoMTHh7+DnS6lCwWC+QLBOBjrRbs6ekZ
-        gSZx78V1h6ioqKPQJGKhUAjyeLw9lUq119vbO4XIh0N0dPQRAoHAaW9vB6G/HYAOQBoiHSpvQD8eHYPB
-        EJH8/8TD4195WxqGzKhWIgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="button11.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="button11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 48</value>
-  </data>
-  <data name="button11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
-  </data>
-  <data name="button11.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;button11.Name" xml:space="preserve">
-    <value>button11</value>
-  </data>
-  <data name="&gt;&gt;button11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button11.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button11.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
   <data name="button12.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
@@ -539,7 +448,7 @@
     <value>21</value>
   </data>
   <data name="button13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>920, 48</value>
+    <value>867, 48</value>
   </data>
   <data name="button13.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -557,10 +466,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button13.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="button14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>920, 12</value>
+    <value>867, 12</value>
   </data>
   <data name="button14.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -578,10 +487,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button14.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="button15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>884, 48</value>
+    <value>831, 48</value>
   </data>
   <data name="button15.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -599,10 +508,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button15.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="button16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>956, 12</value>
+    <value>903, 12</value>
   </data>
   <data name="button16.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -620,10 +529,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button16.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="button17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>848, 48</value>
+    <value>795, 48</value>
   </data>
   <data name="button17.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -641,10 +550,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button17.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="button18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>884, 12</value>
+    <value>831, 12</value>
   </data>
   <data name="button18.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -662,7 +571,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button18.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="button20.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -698,7 +607,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button20.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="button21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -729,7 +638,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button21.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="button22.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -764,7 +673,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button22.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="button24.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -796,10 +705,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button24.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="button25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1064, 48</value>
+    <value>1011, 48</value>
   </data>
   <data name="button25.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -817,10 +726,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button25.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="button26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1028, 48</value>
+    <value>975, 48</value>
   </data>
   <data name="button26.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -838,10 +747,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button26.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="button27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>992, 48</value>
+    <value>939, 48</value>
   </data>
   <data name="button27.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -859,10 +768,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button27.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="button28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>777, 12</value>
+    <value>724, 12</value>
   </data>
   <data name="button28.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -880,10 +789,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button28.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="button29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1064, 12</value>
+    <value>1011, 12</value>
   </data>
   <data name="button29.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -901,10 +810,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button29.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="button30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1028, 12</value>
+    <value>975, 12</value>
   </data>
   <data name="button30.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -922,10 +831,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button30.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="button31.Location" type="System.Drawing.Point, System.Drawing">
-    <value>956, 48</value>
+    <value>903, 48</value>
   </data>
   <data name="button31.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -943,10 +852,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button31.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="button32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>992, 12</value>
+    <value>939, 12</value>
   </data>
   <data name="button32.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -964,7 +873,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button32.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="trackBar1.Location" type="System.Drawing.Point, System.Drawing">
     <value>354, 22</value>
@@ -985,13 +894,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;trackBar1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 12</value>
+    <value>606, 12</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 66</value>
@@ -1009,6 +918,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="clearAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1064, 12</value>
+  </data>
+  <data name="clearAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 65</value>
+  </data>
+  <data name="clearAll.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="clearAll.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="&gt;&gt;clearAll.Name" xml:space="preserve">
+    <value>clearAll</value>
+  </data>
+  <data name="&gt;&gt;clearAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clearAll.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;clearAll.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
