@@ -1,4 +1,4 @@
-﻿namespace EndExamples
+﻿namespace DynamicButtons
 {
     partial class Form1
     {
@@ -34,10 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 553);
+            this.ClientSize = new System.Drawing.Size(671, 619);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.button_Click);
             this.ResumeLayout(false);
 
         }

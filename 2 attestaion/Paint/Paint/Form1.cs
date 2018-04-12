@@ -20,7 +20,7 @@ namespace Paint
         Point prev, cur;
         Pen pen;
         Queue<Point> q = new Queue<Point>();
-        Color initcolor, fillcolor;
+        Color initcolor;
 
         public enum Tool
         {
@@ -140,8 +140,6 @@ namespace Paint
                 g.DrawRectangle(pen, x, y, w, h);
             }
             
-           // pictureBox1.Refresh();
-            
             if(tool == Tool.TRIANGLE)
             {
                 g.DrawPolygon(pen, GetTriangle(prev, e.Location));
@@ -149,13 +147,13 @@ namespace Paint
 
             if (tool == Tool.LINE)
             {
-                int x1 = Math.Min(prev.X, cur.X);
+                /*int x1 = Math.Min(prev.X, cur.X);
                 int y1 = Math.Min(prev.Y, cur.Y);
                 int x2 = Math.Abs(prev.X - cur.X);
                 int y2 = Math.Abs(prev.Y - cur.Y);
+                */
                 g.DrawLine(pen, prev.X, prev.Y, e.Location.X, e.Location.Y);
             }
-          //  pictureBox1.Refresh();
 
             if (tool == Tool.ELLIPSE)
             {
@@ -222,19 +220,19 @@ namespace Paint
             tool = Tool.clearAll;
             g.Clear(Color.White);
             pictureBox1.Refresh();
-
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            clicked = true;
-        }
-
-        private void trackBar1_ValueChanged(object sender, EventArgs e)
-        {
+            //clicked = true;
             pen.Width = float.Parse(trackBar1.Value.ToString());
         }
-
+        
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+          
+        }
+        
         private void Button(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -259,9 +257,9 @@ namespace Paint
                         int h = Math.Abs(prev.Y - cur.Y);
                         e.Graphics.DrawRectangle(pen, x, y, w, h);
                         break;
-                    case Tool.LINE:
+                    case Tool.LINE:                       
                         break;
-                    case Tool.ELLIPSE:
+                    case Tool.ELLIPSE:                     
                         break;
                     case Tool.TRIANGLE:
                         break;

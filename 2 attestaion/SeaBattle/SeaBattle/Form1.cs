@@ -15,8 +15,8 @@ namespace SeaBattle
         Graphics g;
         Bitmap bmp;
         Pen pen;
+        int n = 10;
         List<Point> p = new List<Point>();
-        Point cur, prev;
 
         public Form1()
         {
@@ -28,9 +28,10 @@ namespace SeaBattle
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
         }
 
-        private void pictureBox1_SeaBattle(object sender, EventArgs e)
+        private void DrawRectangle(object sender, EventArgs e)
         {
-            e.DrawRectangle(new Pen(Color.Black, 2), pictureBox1.Width, pictureBox1.Height, 20, 20);
+            Rectangle[,] arr = new Rectangle[10, 10];
+            
         }
     }
 }

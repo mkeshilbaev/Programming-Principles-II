@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ellipse", "Ellipse\Ellipse.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackBarkFontChange", "TrackBarkFontChange\TrackBarkFontChange.csproj", "{FFE4DF5F-AC9A-4362-8621-ED31A8076FC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "car", "car\car.csproj", "{8D0DF20E-D00D-4B27-949A-72A970621215}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{FFE4DF5F-AC9A-4362-8621-ED31A8076FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFE4DF5F-AC9A-4362-8621-ED31A8076FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFE4DF5F-AC9A-4362-8621-ED31A8076FC9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D0DF20E-D00D-4B27-949A-72A970621215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D0DF20E-D00D-4B27-949A-72A970621215}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D0DF20E-D00D-4B27-949A-72A970621215}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D0DF20E-D00D-4B27-949A-72A970621215}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
