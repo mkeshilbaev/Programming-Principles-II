@@ -40,7 +40,7 @@ namespace Paint
 
         public Paint()
         {
-            InitializeComponent();          
+            InitializeComponent();
             bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             pictureBox1.Image = bmp;
             g = Graphics.FromImage(bmp);         
@@ -142,16 +142,14 @@ namespace Paint
             
             if(tool == Tool.TRIANGLE)
             {
-                g.DrawPolygon(pen, GetTriangle(prev, e.Location));
+                // g.DrawPolygon(pen, GetTriangle(prev, e.Location));
+                g.DrawLine(pen, (prev.X + cur.X) / 2, Math.Min(prev.Y, cur.Y), Math.Min(prev.X, cur.X), Math.Max(prev.Y, cur.Y));
+                g.DrawLine(pen, (prev.X + cur.X) / 2, Math.Min(prev.Y, cur.Y), Math.Max(prev.X, cur.X), Math.Max(prev.Y, cur.Y));
+                g.DrawLine(pen, Math.Min(prev.X, cur.X), Math.Max(prev.Y, cur.Y), Math.Max(prev.X, cur.X), Math.Max(prev.Y, cur.Y));
             }
 
             if (tool == Tool.LINE)
             {
-                /*int x1 = Math.Min(prev.X, cur.X);
-                int y1 = Math.Min(prev.Y, cur.Y);
-                int x2 = Math.Abs(prev.X - cur.X);
-                int y2 = Math.Abs(prev.Y - cur.Y);
-                */
                 g.DrawLine(pen, prev.X, prev.Y, e.Location.X, e.Location.Y);
             }
 
@@ -170,7 +168,8 @@ namespace Paint
         {
             PointF[] points = {new PointF(p1.X, p2.Y),
                                p2,
-                               new PointF((p1.X + p2.X)/2, p1.Y) };
+                               new PointF((p1.X + p2.X)/2, p1.Y)
+            };
             return points;
         }
 
@@ -224,13 +223,7 @@ namespace Paint
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            //clicked = true;
             pen.Width = float.Parse(trackBar1.Value.ToString());
-        }
-        
-        private void trackBar1_ValueChanged(object sender, EventArgs e)
-        {
-          
         }
         
         private void Button(object sender, EventArgs e)
@@ -239,7 +232,60 @@ namespace Paint
             pen.Color = btn.BackColor;
             currentColor = btn.BackColor;
             pictureBox2.BackColor = currentColor;
-        }       
+        }
+       
+        private void saveToolStripMenu_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Title = "Save paint as ...";
+            saveFileDialog1.OverwritePrompt = true;
+            saveFileDialog1.CheckPathExists = true;
+            saveFileDialog1.Filter =
+                "JPEG File(*.jpg)|*.jpg|" +
+                "Bitmap File(*.bmp)|*.bmp|" +
+                "GIF File(*.gif)|*.gif|" +
+                "TIF File(*.tif)|*.tif|" +
+                "PNG File(*.png)|*.png";
+            saveFileDialog1.ShowHelp = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = saveFileDialog1.FileName;
+                string fileExtn = fileName.Remove(0, fileName.Length - 3);
+
+                switch (fileExtn)
+                {
+                    case "bmp":
+                        pictureBox1.Image.Save(fileName, System.Drawing.Imaging.ImageFormat.Bmp);
+                        break;
+                    case "jpg":
+                        bmp.Save(fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        break;
+                    case "gif":
+                        bmp.Save(fileName, System.Drawing.Imaging.ImageFormat.Gif);
+                        break;
+                    case "tif":
+                        bmp.Save(fileName, System.Drawing.Imaging.ImageFormat.Tiff);
+                        break;
+                    case "png":
+                        bmp.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void openToolStripMenu_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Choose file ...";
+            openFileDialog1.FileName = "";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                bmp = new Bitmap(Bitmap.FromFile(openFileDialog1.FileName));
+                g = Graphics.FromImage(bmp);
+                pictureBox1.Image = bmp;
+            }
+        }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
@@ -257,11 +303,28 @@ namespace Paint
                         int h = Math.Abs(prev.Y - cur.Y);
                         e.Graphics.DrawRectangle(pen, x, y, w, h);
                         break;
-                    case Tool.LINE:                       
+                    case Tool.LINE:
+                        e.Graphics.DrawLine(pen, prev, cur);
                         break;
-                    case Tool.ELLIPSE:                     
+                    case Tool.ELLIPSE:
+                        int x1 = Math.Min(prev.X, cur.X);
+                        int y1 = Math.Min(prev.Y, cur.Y);
+                        int w1 = Math.Abs(prev.X - cur.X);
+                        int h1 = Math.Abs(prev.Y - cur.Y);
+                        e.Graphics.DrawEllipse(pen, x1, y1, w1, h1);                       
                         break;
                     case Tool.TRIANGLE:
+                        /*PointF[] points =
+                        {
+                        new PointF((prev.X + cur.X)/2, prev.Y),
+                        new PointF(prev.X, cur.Y),
+                        new PointF(cur.X, cur.Y)
+                        };
+                        e.Graphics.DrawPolygon(pen, prev, cur);
+                        */
+                        e.Graphics.DrawLine(pen, (prev.X + cur.X) / 2, Math.Min(prev.Y, cur.Y), Math.Min(prev.X, cur.X), Math.Max(prev.Y, cur.Y));
+                        e.Graphics.DrawLine(pen, (prev.X + cur.X) / 2, Math.Min(prev.Y, cur.Y), Math.Max(prev.X, cur.X), Math.Max(prev.Y, cur.Y));
+                        e.Graphics.DrawLine(pen, Math.Min(prev.X, cur.X), Math.Max(prev.Y, cur.Y), Math.Max(prev.X, cur.X), Math.Max(prev.Y, cur.Y));
                         break;
                     case Tool.FILL:
                         break;
@@ -275,7 +338,6 @@ namespace Paint
                         break;
                 }
             }
-
         }
     }
 }

@@ -12,7 +12,7 @@ namespace CALCULATOR
 {
     public partial class Form1 : Form
     {
-        Double a = 0, b = 0;
+        Double first = 0, second = 0;
         String operation = "";
         bool operation_pressed = false;
         double memory = 0;
@@ -52,31 +52,26 @@ namespace CALCULATOR
         {
             textBox1.Text = "0";
             result = 0;
-            a = 0;
+            first = 0;
             label1.Text = "";
-        }
-
-        private void clearEntry_Click(object sender, EventArgs e)
-        {
-            /* textBox1.Clear();
-             value = 0;
-             textBox1.Text = "0";
-             */
         }
 
         private void clearLastDigit_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
+            if (textBox1.Text != "0")
             {
                 textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
             }
+
+            if (textBox1.Text.Length == 0)
+                textBox1.Text += '0';
         }
 
         private void operator_click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
 
-            if (a != 0)
+            if (first != 0)
             {
                 equal.PerformClick();
                 operation_pressed = true;
@@ -85,7 +80,7 @@ namespace CALCULATOR
             else
             {
                 operation = btn.Text;
-                a = Double.Parse(textBox1.Text);
+                first = Double.Parse(textBox1.Text);
                 operation_pressed = true;
             }
             if (operation_pressed == true)
@@ -94,7 +89,7 @@ namespace CALCULATOR
                 {
                     {
                         {
-                            label1.Text = a + " " + operation;
+                            label1.Text = first + " " + operation;
                         }
                     }
                 }
@@ -108,90 +103,112 @@ namespace CALCULATOR
                 private void equal_Click(object sender, EventArgs e)
                 {
                     label1.Text = "";
-                    b = Double.Parse(textBox1.Text);
+                    second = Double.Parse(textBox1.Text);
 
-                    switch (operation)
+            switch (operation)
+            {
+                case "+":
+                    operation_pressed = true;
+                    result = first + second;
+                    textBox1.Text = Convert.ToString(result);
+                    first = result;
+
+                    if (result != 0)
                     {
-                        case "+":
-                            operation_pressed = true;
-                            result = a + b;
-                            textBox1.Text = Convert.ToString(result);
-                            a = result;
-
-                            if (result != 0)
-                            {
-                                label1.Text = result + "";
-                            }
-                            else
-                            {
-                                label1.Text = "";
-                            }
-                            break;
-
-                        case "-":
-                            operation_pressed = true;
-                            result = a - b;
-                            textBox1.Text = Convert.ToString(result);
-                            a = result;
-
-                            if (result != 0)
-                            {
-                                label1.Text = result + "";
-                            }
-                            else
-                            {
-                                label1.Text = "";
-                            }
-                            break;
-
-                        case "×":
-                            operation_pressed = true;
-                            result = a * b;
-                            textBox1.Text = Convert.ToString(result);
-                            a = result;
-
-                            if (result != 0)
-                            {
-                                label1.Text = result + "";
-                            }
-                            else
-                            {
-                                label1.Text = "";
-                            }
-                            break;
-
-                        case "÷":
-                            operation_pressed = true;
-                            if (b != 0)
-                            {
-                                result = a / b;
-                                textBox1.Text = Convert.ToString(result);
-                                a = result;
-                            }
-
-                            else textBox1.Text = "impossible";
-
-                            if (result != 0)
-                            {
-                                label1.Text = result + "";
-                            }
-                            else
-                            {
-                                label1.Text = "";
-                            }
-                            break;
-
-                        default:
-                            break;
+                        label1.Text = result + "";
                     }
-                    operation_pressed = false;
+                    else
+                    {
+                        label1.Text = "";
+                    }
+                    break;
+
+                case "-":
+                    operation_pressed = true;
+                    result = first - second;
+                    textBox1.Text = Convert.ToString(result);
+                    first = result;
+
+                    if (result != 0)
+                    {
+                        label1.Text = result + "";
+                    }
+                    else
+                    {
+                        label1.Text = "";
+                    }
+                    break;
+
+                case "×":
+                    operation_pressed = true;
+                    result = first * second;
+                    textBox1.Text = Convert.ToString(result);
+                    first = result;
+
+                    if (result != 0)
+                    {
+                        label1.Text = result + "";
+                    }
+                    else
+                    {
+                        label1.Text = "";
+                    }
+                    break;
+
+                case "÷":
+                    operation_pressed = true;
+                    if (second != 0)
+                    {
+                        result = first / second;
+                        textBox1.Text = Convert.ToString(result);
+                        first = result;
+                    }
+
+                    else textBox1.Text = "impossible";
+
+                    if (result != 0)
+                    {
+                        label1.Text = result + "";
+                    }
+                    else
+                    {
+                        label1.Text = "";
+                    }
+                    break;
+
+                case "%":
+                    operation_pressed = true;
+                    result = first * second / 100;
+                    textBox1.Text = Convert.ToString(result);
+                    break;
+
+                case "Mod":
+                    operation_pressed = true;
+                    result = first % second;
+                    textBox1.Text = Convert.ToString(result);
+                    label1.Text = first + " Mod";
+                    break;
+
+                case "x^y":
+                    operation_pressed = true;
+                    result = Math.Pow(first, second);
+                    textBox1.Text = Convert.ToString(result);
+                    label1.Text = first + "^";
+                    break;
+
+                default:
+                    break;
+            }
+            operation_pressed = false;
+
                 }
 
-                private void percent_Click(object sender, EventArgs e)
+               /* private void percent_Click(object sender, EventArgs e)
                 {
                     Double n = a * (double.Parse(textBox1.Text) / 100);
                     textBox1.Text = (n).ToString();
                 }
+               */
 
                 private void root_Click(object sender, EventArgs e)
                 {
@@ -247,7 +264,105 @@ namespace CALCULATOR
                     textBox1.Text = "";
                 }
 
-                private void memoryClear_Click(object sender, EventArgs e)
+        private void Sin_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            textBox1.Text = (Math.Sin((Math.PI * n) / 180).ToString());
+            label1.Text += "Sin(" + n + ")";
+        }
+
+        private void Cos_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            textBox1.Text = (Math.Cos((Math.PI * n)/180)).ToString();
+            label1.Text += "Cos(" + n + ")";
+        }
+
+        private void Tan_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            textBox1.Text = (Math.Tan((Math.PI * n)/180)).ToString();
+            label1.Text += "tan(" + n + ")";
+        }
+
+        private void log_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            textBox1.Text = (Math.Log10(n)).ToString();
+            label1.Text += "log(" + n + ")";
+        }
+
+        private void Exp_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            textBox1.Text = (Math.Exp(n)).ToString();
+        }
+
+        /*
+        private void Mod_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+           // textBox1.Text = ((n % b)).ToString();
+            //abel1.Text += n + " Mod";
+        }
+        */
+
+        private void TenPower_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            textBox1.Text = (Math.Pow(10, n)).ToString();
+            label1.Text += "10^(" + n + ")";
+        }
+
+        /*
+        private void XandYpow_Click(object sender, EventArgs e)
+        {
+            double n = Double.Parse(textBox1.Text);
+            textBox1.Text = (Math.Pow(a, n)).ToString();
+            label1.Text += a + "^";
+        }
+        */
+
+        private void PI_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = Math.PI.ToString();
+        }
+
+        private void Fact_Click(object sender, EventArgs e)
+        {
+            result = 1;
+            Double n = double.Parse(textBox1.Text);
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+            }
+            textBox1.Text = Convert.ToString(result);
+        }
+
+        private void Brecket1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "(";
+
+        }
+
+        private void Brecket2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = ")";
+        }
+
+        private void standartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Width = 241;
+            textBox1.Width = 215;
+        }
+
+        private void engineerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Width = 400;
+            textBox1.Width = 400;
+        }
+
+        private void memoryClear_Click(object sender, EventArgs e)
                 {
                     memory = 0;
                 }

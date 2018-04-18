@@ -36,7 +36,6 @@
             this.division = new System.Windows.Forms.Button();
             this.clearLastDigit = new System.Windows.Forms.Button();
             this.clearAll = new System.Windows.Forms.Button();
-            this.clearEntry = new System.Windows.Forms.Button();
             this.multiply = new System.Windows.Forms.Button();
             this.nine = new System.Windows.Forms.Button();
             this.eight = new System.Windows.Forms.Button();
@@ -60,22 +59,23 @@
             this.memoryClear = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.memorySubtract = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.Sin = new System.Windows.Forms.Button();
+            this.Brecket1 = new System.Windows.Forms.Button();
+            this.Fact = new System.Windows.Forms.Button();
+            this.TenPower = new System.Windows.Forms.Button();
+            this.Exp = new System.Windows.Forms.Button();
+            this.Tan = new System.Windows.Forms.Button();
+            this.Cos = new System.Windows.Forms.Button();
+            this.Brecket2 = new System.Windows.Forms.Button();
+            this.PI = new System.Windows.Forms.Button();
+            this.XandYpow = new System.Windows.Forms.Button();
+            this.Mod = new System.Windows.Forms.Button();
+            this.log = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.standartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.engineerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // percent
@@ -84,12 +84,13 @@
             this.percent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.percent.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.percent.ForeColor = System.Drawing.Color.White;
-            this.percent.Location = new System.Drawing.Point(1, 225);
+            this.percent.Location = new System.Drawing.Point(-1, 205);
             this.percent.Name = "percent";
-            this.percent.Size = new System.Drawing.Size(82, 48);
+            this.percent.Size = new System.Drawing.Size(80, 50);
             this.percent.TabIndex = 0;
             this.percent.Text = "%";
             this.percent.UseVisualStyleBackColor = false;
+            this.percent.Click += new System.EventHandler(this.operator_click);
             // 
             // root
             // 
@@ -97,9 +98,9 @@
             this.root.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.root.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.root.ForeColor = System.Drawing.Color.White;
-            this.root.Location = new System.Drawing.Point(76, 225);
+            this.root.Location = new System.Drawing.Point(74, 198);
             this.root.Name = "root";
-            this.root.Size = new System.Drawing.Size(82, 48);
+            this.root.Size = new System.Drawing.Size(80, 50);
             this.root.TabIndex = 1;
             this.root.Text = "√";
             this.root.UseVisualStyleBackColor = false;
@@ -111,9 +112,9 @@
             this.square.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.square.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.square.ForeColor = System.Drawing.Color.White;
-            this.square.Location = new System.Drawing.Point(154, 225);
+            this.square.Location = new System.Drawing.Point(148, 198);
             this.square.Name = "square";
-            this.square.Size = new System.Drawing.Size(82, 48);
+            this.square.Size = new System.Drawing.Size(80, 50);
             this.square.TabIndex = 2;
             this.square.Text = "x^2";
             this.square.UseVisualStyleBackColor = false;
@@ -125,9 +126,9 @@
             this.rational.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.rational.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rational.ForeColor = System.Drawing.Color.White;
-            this.rational.Location = new System.Drawing.Point(1, 269);
+            this.rational.Location = new System.Drawing.Point(-1, 243);
             this.rational.Name = "rational";
-            this.rational.Size = new System.Drawing.Size(82, 48);
+            this.rational.Size = new System.Drawing.Size(80, 50);
             this.rational.TabIndex = 3;
             this.rational.Text = "1/x";
             this.rational.UseVisualStyleBackColor = false;
@@ -139,9 +140,9 @@
             this.division.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.division.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.division.ForeColor = System.Drawing.Color.White;
-            this.division.Location = new System.Drawing.Point(231, 269);
+            this.division.Location = new System.Drawing.Point(223, 243);
             this.division.Name = "division";
-            this.division.Size = new System.Drawing.Size(82, 48);
+            this.division.Size = new System.Drawing.Size(80, 50);
             this.division.TabIndex = 7;
             this.division.Text = "÷";
             this.division.UseVisualStyleBackColor = false;
@@ -153,11 +154,11 @@
             this.clearLastDigit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearLastDigit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.clearLastDigit.ForeColor = System.Drawing.Color.White;
-            this.clearLastDigit.Location = new System.Drawing.Point(154, 269);
+            this.clearLastDigit.Location = new System.Drawing.Point(148, 243);
             this.clearLastDigit.Name = "clearLastDigit";
-            this.clearLastDigit.Size = new System.Drawing.Size(82, 48);
+            this.clearLastDigit.Size = new System.Drawing.Size(80, 50);
             this.clearLastDigit.TabIndex = 6;
-            this.clearLastDigit.Text = "<=";
+            this.clearLastDigit.Text = "←";
             this.clearLastDigit.UseVisualStyleBackColor = false;
             this.clearLastDigit.Click += new System.EventHandler(this.clearLastDigit_Click);
             // 
@@ -167,27 +168,13 @@
             this.clearAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearAll.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.clearAll.ForeColor = System.Drawing.Color.White;
-            this.clearAll.Location = new System.Drawing.Point(76, 269);
+            this.clearAll.Location = new System.Drawing.Point(74, 243);
             this.clearAll.Name = "clearAll";
-            this.clearAll.Size = new System.Drawing.Size(82, 48);
+            this.clearAll.Size = new System.Drawing.Size(80, 50);
             this.clearAll.TabIndex = 5;
             this.clearAll.Text = "C";
             this.clearAll.UseVisualStyleBackColor = false;
             this.clearAll.Click += new System.EventHandler(this.clearAll_Click);
-            // 
-            // clearEntry
-            // 
-            this.clearEntry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.clearEntry.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.clearEntry.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clearEntry.ForeColor = System.Drawing.Color.White;
-            this.clearEntry.Location = new System.Drawing.Point(231, 225);
-            this.clearEntry.Name = "clearEntry";
-            this.clearEntry.Size = new System.Drawing.Size(82, 48);
-            this.clearEntry.TabIndex = 4;
-            this.clearEntry.Text = "CE";
-            this.clearEntry.UseVisualStyleBackColor = false;
-            this.clearEntry.Click += new System.EventHandler(this.clearEntry_Click);
             // 
             // multiply
             // 
@@ -195,9 +182,9 @@
             this.multiply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.multiply.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.multiply.ForeColor = System.Drawing.Color.White;
-            this.multiply.Location = new System.Drawing.Point(231, 307);
+            this.multiply.Location = new System.Drawing.Point(223, 288);
             this.multiply.Name = "multiply";
-            this.multiply.Size = new System.Drawing.Size(82, 48);
+            this.multiply.Size = new System.Drawing.Size(80, 50);
             this.multiply.TabIndex = 11;
             this.multiply.Text = "×";
             this.multiply.UseVisualStyleBackColor = false;
@@ -209,9 +196,9 @@
             this.nine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nine.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nine.ForeColor = System.Drawing.Color.White;
-            this.nine.Location = new System.Drawing.Point(154, 307);
+            this.nine.Location = new System.Drawing.Point(148, 288);
             this.nine.Name = "nine";
-            this.nine.Size = new System.Drawing.Size(82, 48);
+            this.nine.Size = new System.Drawing.Size(80, 50);
             this.nine.TabIndex = 10;
             this.nine.Text = "9";
             this.nine.UseVisualStyleBackColor = false;
@@ -223,9 +210,9 @@
             this.eight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.eight.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eight.ForeColor = System.Drawing.Color.White;
-            this.eight.Location = new System.Drawing.Point(76, 307);
+            this.eight.Location = new System.Drawing.Point(74, 288);
             this.eight.Name = "eight";
-            this.eight.Size = new System.Drawing.Size(82, 48);
+            this.eight.Size = new System.Drawing.Size(80, 50);
             this.eight.TabIndex = 9;
             this.eight.Text = "8";
             this.eight.UseVisualStyleBackColor = false;
@@ -237,9 +224,9 @@
             this.seven.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.seven.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.seven.ForeColor = System.Drawing.Color.White;
-            this.seven.Location = new System.Drawing.Point(1, 307);
+            this.seven.Location = new System.Drawing.Point(-1, 288);
             this.seven.Name = "seven";
-            this.seven.Size = new System.Drawing.Size(82, 48);
+            this.seven.Size = new System.Drawing.Size(80, 50);
             this.seven.TabIndex = 8;
             this.seven.Text = "7";
             this.seven.UseVisualStyleBackColor = false;
@@ -251,9 +238,9 @@
             this.minus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.minus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.minus.ForeColor = System.Drawing.Color.White;
-            this.minus.Location = new System.Drawing.Point(231, 350);
+            this.minus.Location = new System.Drawing.Point(223, 333);
             this.minus.Name = "minus";
-            this.minus.Size = new System.Drawing.Size(82, 48);
+            this.minus.Size = new System.Drawing.Size(80, 50);
             this.minus.TabIndex = 15;
             this.minus.Text = "-";
             this.minus.UseVisualStyleBackColor = false;
@@ -265,9 +252,9 @@
             this.six.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.six.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.six.ForeColor = System.Drawing.Color.White;
-            this.six.Location = new System.Drawing.Point(154, 350);
+            this.six.Location = new System.Drawing.Point(148, 333);
             this.six.Name = "six";
-            this.six.Size = new System.Drawing.Size(82, 48);
+            this.six.Size = new System.Drawing.Size(80, 50);
             this.six.TabIndex = 14;
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = false;
@@ -279,9 +266,9 @@
             this.five.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.five.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.five.ForeColor = System.Drawing.Color.White;
-            this.five.Location = new System.Drawing.Point(76, 350);
+            this.five.Location = new System.Drawing.Point(74, 333);
             this.five.Name = "five";
-            this.five.Size = new System.Drawing.Size(82, 48);
+            this.five.Size = new System.Drawing.Size(80, 50);
             this.five.TabIndex = 13;
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = false;
@@ -293,9 +280,9 @@
             this.four.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.four.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.four.ForeColor = System.Drawing.Color.White;
-            this.four.Location = new System.Drawing.Point(1, 350);
+            this.four.Location = new System.Drawing.Point(-1, 333);
             this.four.Name = "four";
-            this.four.Size = new System.Drawing.Size(82, 48);
+            this.four.Size = new System.Drawing.Size(80, 50);
             this.four.TabIndex = 12;
             this.four.Text = "4";
             this.four.UseVisualStyleBackColor = false;
@@ -307,9 +294,9 @@
             this.plus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.plus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.plus.ForeColor = System.Drawing.Color.White;
-            this.plus.Location = new System.Drawing.Point(231, 395);
+            this.plus.Location = new System.Drawing.Point(223, 379);
             this.plus.Name = "plus";
-            this.plus.Size = new System.Drawing.Size(82, 48);
+            this.plus.Size = new System.Drawing.Size(80, 50);
             this.plus.TabIndex = 19;
             this.plus.Text = "+";
             this.plus.UseVisualStyleBackColor = false;
@@ -321,9 +308,9 @@
             this.three.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.three.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.three.ForeColor = System.Drawing.Color.White;
-            this.three.Location = new System.Drawing.Point(154, 395);
+            this.three.Location = new System.Drawing.Point(148, 379);
             this.three.Name = "three";
-            this.three.Size = new System.Drawing.Size(82, 48);
+            this.three.Size = new System.Drawing.Size(80, 50);
             this.three.TabIndex = 18;
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = false;
@@ -335,9 +322,9 @@
             this.two.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.two.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.two.ForeColor = System.Drawing.Color.White;
-            this.two.Location = new System.Drawing.Point(76, 395);
+            this.two.Location = new System.Drawing.Point(74, 379);
             this.two.Name = "two";
-            this.two.Size = new System.Drawing.Size(82, 48);
+            this.two.Size = new System.Drawing.Size(80, 50);
             this.two.TabIndex = 17;
             this.two.Text = "2";
             this.two.UseVisualStyleBackColor = false;
@@ -349,9 +336,9 @@
             this.one.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.one.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.one.ForeColor = System.Drawing.Color.White;
-            this.one.Location = new System.Drawing.Point(1, 395);
+            this.one.Location = new System.Drawing.Point(-1, 379);
             this.one.Name = "one";
-            this.one.Size = new System.Drawing.Size(82, 48);
+            this.one.Size = new System.Drawing.Size(80, 50);
             this.one.TabIndex = 16;
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = false;
@@ -363,9 +350,9 @@
             this.equal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.equal.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.equal.ForeColor = System.Drawing.Color.White;
-            this.equal.Location = new System.Drawing.Point(231, 436);
+            this.equal.Location = new System.Drawing.Point(223, 423);
             this.equal.Name = "equal";
-            this.equal.Size = new System.Drawing.Size(82, 48);
+            this.equal.Size = new System.Drawing.Size(233, 50);
             this.equal.TabIndex = 23;
             this.equal.Text = "=";
             this.equal.UseVisualStyleBackColor = false;
@@ -377,9 +364,9 @@
             this.comma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comma.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comma.ForeColor = System.Drawing.Color.White;
-            this.comma.Location = new System.Drawing.Point(154, 436);
+            this.comma.Location = new System.Drawing.Point(148, 423);
             this.comma.Name = "comma";
-            this.comma.Size = new System.Drawing.Size(82, 48);
+            this.comma.Size = new System.Drawing.Size(80, 50);
             this.comma.TabIndex = 22;
             this.comma.Text = ",";
             this.comma.UseVisualStyleBackColor = false;
@@ -391,9 +378,9 @@
             this.zero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.zero.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.zero.ForeColor = System.Drawing.Color.White;
-            this.zero.Location = new System.Drawing.Point(76, 436);
+            this.zero.Location = new System.Drawing.Point(74, 423);
             this.zero.Name = "zero";
-            this.zero.Size = new System.Drawing.Size(82, 48);
+            this.zero.Size = new System.Drawing.Size(80, 50);
             this.zero.TabIndex = 21;
             this.zero.Text = "0";
             this.zero.UseVisualStyleBackColor = false;
@@ -405,9 +392,9 @@
             this.plusminus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.plusminus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.plusminus.ForeColor = System.Drawing.Color.White;
-            this.plusminus.Location = new System.Drawing.Point(1, 436);
+            this.plusminus.Location = new System.Drawing.Point(-1, 423);
             this.plusminus.Name = "plusminus";
-            this.plusminus.Size = new System.Drawing.Size(82, 48);
+            this.plusminus.Size = new System.Drawing.Size(80, 50);
             this.plusminus.TabIndex = 20;
             this.plusminus.Text = "±";
             this.plusminus.UseVisualStyleBackColor = false;
@@ -429,9 +416,9 @@
             this.MemoryAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.MemoryAdd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MemoryAdd.ForeColor = System.Drawing.Color.White;
-            this.MemoryAdd.Location = new System.Drawing.Point(231, 180);
+            this.MemoryAdd.Location = new System.Drawing.Point(223, 156);
             this.MemoryAdd.Name = "MemoryAdd";
-            this.MemoryAdd.Size = new System.Drawing.Size(82, 48);
+            this.MemoryAdd.Size = new System.Drawing.Size(80, 50);
             this.MemoryAdd.TabIndex = 29;
             this.MemoryAdd.Text = "M+";
             this.MemoryAdd.UseVisualStyleBackColor = false;
@@ -443,9 +430,9 @@
             this.memoryStore.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.memoryStore.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.memoryStore.ForeColor = System.Drawing.Color.White;
-            this.memoryStore.Location = new System.Drawing.Point(154, 180);
+            this.memoryStore.Location = new System.Drawing.Point(148, 156);
             this.memoryStore.Name = "memoryStore";
-            this.memoryStore.Size = new System.Drawing.Size(82, 48);
+            this.memoryStore.Size = new System.Drawing.Size(80, 50);
             this.memoryStore.TabIndex = 28;
             this.memoryStore.Text = "MS";
             this.memoryStore.UseVisualStyleBackColor = false;
@@ -457,9 +444,9 @@
             this.memoryRecall.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.memoryRecall.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.memoryRecall.ForeColor = System.Drawing.Color.White;
-            this.memoryRecall.Location = new System.Drawing.Point(76, 180);
+            this.memoryRecall.Location = new System.Drawing.Point(74, 156);
             this.memoryRecall.Name = "memoryRecall";
-            this.memoryRecall.Size = new System.Drawing.Size(82, 48);
+            this.memoryRecall.Size = new System.Drawing.Size(80, 50);
             this.memoryRecall.TabIndex = 27;
             this.memoryRecall.Text = "MR";
             this.memoryRecall.UseVisualStyleBackColor = false;
@@ -471,9 +458,9 @@
             this.memoryClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.memoryClear.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.memoryClear.ForeColor = System.Drawing.Color.White;
-            this.memoryClear.Location = new System.Drawing.Point(1, 180);
+            this.memoryClear.Location = new System.Drawing.Point(-1, 156);
             this.memoryClear.Name = "memoryClear";
-            this.memoryClear.Size = new System.Drawing.Size(82, 48);
+            this.memoryClear.Size = new System.Drawing.Size(80, 50);
             this.memoryClear.TabIndex = 26;
             this.memoryClear.Text = "MC";
             this.memoryClear.UseVisualStyleBackColor = false;
@@ -485,11 +472,11 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F);
             this.textBox1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.Location = new System.Drawing.Point(17, 79);
+            this.textBox1.Location = new System.Drawing.Point(12, 79);
             this.textBox1.MaxLength = 12;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(438, 71);
+            this.textBox1.Size = new System.Drawing.Size(432, 71);
             this.textBox1.TabIndex = 30;
             this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -500,244 +487,234 @@
             this.memorySubtract.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.memorySubtract.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.memorySubtract.ForeColor = System.Drawing.Color.White;
-            this.memorySubtract.Location = new System.Drawing.Point(231, 227);
+            this.memorySubtract.Location = new System.Drawing.Point(223, 205);
             this.memorySubtract.Name = "memorySubtract";
-            this.memorySubtract.Size = new System.Drawing.Size(82, 43);
+            this.memorySubtract.Size = new System.Drawing.Size(80, 50);
             this.memorySubtract.TabIndex = 31;
             this.memorySubtract.Text = "M-";
             this.memorySubtract.UseVisualStyleBackColor = false;
             this.memorySubtract.Click += new System.EventHandler(this.memorySubtract_Click);
             // 
-            // button1
+            // Sin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(310, 227);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 43);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "M-";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Sin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Sin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Sin.ForeColor = System.Drawing.Color.White;
+            this.Sin.Location = new System.Drawing.Point(300, 198);
+            this.Sin.Name = "Sin";
+            this.Sin.Size = new System.Drawing.Size(80, 50);
+            this.Sin.TabIndex = 39;
+            this.Sin.Text = "Sin";
+            this.Sin.UseVisualStyleBackColor = false;
+            this.Sin.Click += new System.EventHandler(this.Sin_Click);
             // 
-            // button2
+            // Brecket1
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(310, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 48);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "M+";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Brecket1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Brecket1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Brecket1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Brecket1.ForeColor = System.Drawing.Color.White;
+            this.Brecket1.Location = new System.Drawing.Point(300, 156);
+            this.Brecket1.Name = "Brecket1";
+            this.Brecket1.Size = new System.Drawing.Size(80, 50);
+            this.Brecket1.TabIndex = 38;
+            this.Brecket1.Text = "(";
+            this.Brecket1.UseVisualStyleBackColor = false;
+            this.Brecket1.Click += new System.EventHandler(this.operator_click);
             // 
-            // button3
+            // Fact
             // 
-            this.button3.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(310, 436);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 48);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "=";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Fact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Fact.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Fact.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Fact.ForeColor = System.Drawing.Color.White;
+            this.Fact.Location = new System.Drawing.Point(376, 379);
+            this.Fact.Name = "Fact";
+            this.Fact.Size = new System.Drawing.Size(80, 50);
+            this.Fact.TabIndex = 36;
+            this.Fact.Text = "n!";
+            this.Fact.UseVisualStyleBackColor = false;
+            this.Fact.Click += new System.EventHandler(this.Fact_Click);
             // 
-            // button4
+            // TenPower
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(310, 395);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(82, 48);
-            this.button4.TabIndex = 36;
-            this.button4.Text = "+";
-            this.button4.UseVisualStyleBackColor = false;
+            this.TenPower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TenPower.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.TenPower.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TenPower.ForeColor = System.Drawing.Color.White;
+            this.TenPower.Location = new System.Drawing.Point(300, 333);
+            this.TenPower.Name = "TenPower";
+            this.TenPower.Size = new System.Drawing.Size(80, 50);
+            this.TenPower.TabIndex = 35;
+            this.TenPower.Text = "10^x";
+            this.TenPower.UseVisualStyleBackColor = false;
+            this.TenPower.Click += new System.EventHandler(this.TenPower_Click);
             // 
-            // button5
+            // Exp
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(310, 350);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(82, 48);
-            this.button5.TabIndex = 35;
-            this.button5.Text = "-";
-            this.button5.UseVisualStyleBackColor = false;
+            this.Exp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Exp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Exp.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Exp.ForeColor = System.Drawing.Color.White;
+            this.Exp.Location = new System.Drawing.Point(300, 288);
+            this.Exp.Name = "Exp";
+            this.Exp.Size = new System.Drawing.Size(80, 50);
+            this.Exp.TabIndex = 34;
+            this.Exp.Text = "Exp";
+            this.Exp.UseVisualStyleBackColor = false;
+            this.Exp.Click += new System.EventHandler(this.Exp_Click);
             // 
-            // button6
+            // Tan
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(310, 307);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(82, 48);
-            this.button6.TabIndex = 34;
-            this.button6.Text = "×";
-            this.button6.UseVisualStyleBackColor = false;
+            this.Tan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Tan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Tan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Tan.ForeColor = System.Drawing.Color.White;
+            this.Tan.Location = new System.Drawing.Point(300, 243);
+            this.Tan.Name = "Tan";
+            this.Tan.Size = new System.Drawing.Size(80, 50);
+            this.Tan.TabIndex = 33;
+            this.Tan.Text = "Tan";
+            this.Tan.UseVisualStyleBackColor = false;
+            this.Tan.Click += new System.EventHandler(this.Tan_Click);
             // 
-            // button7
+            // Cos
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(310, 269);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(82, 48);
-            this.button7.TabIndex = 33;
-            this.button7.Text = "÷";
-            this.button7.UseVisualStyleBackColor = false;
+            this.Cos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Cos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Cos.ForeColor = System.Drawing.Color.White;
+            this.Cos.Location = new System.Drawing.Point(376, 198);
+            this.Cos.Name = "Cos";
+            this.Cos.Size = new System.Drawing.Size(80, 50);
+            this.Cos.TabIndex = 47;
+            this.Cos.Text = "Cos";
+            this.Cos.UseVisualStyleBackColor = false;
+            this.Cos.Click += new System.EventHandler(this.Cos_Click);
             // 
-            // button8
+            // Brecket2
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(310, 225);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(82, 48);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "CE";
-            this.button8.UseVisualStyleBackColor = false;
+            this.Brecket2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Brecket2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Brecket2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Brecket2.ForeColor = System.Drawing.Color.White;
+            this.Brecket2.Location = new System.Drawing.Point(376, 156);
+            this.Brecket2.Name = "Brecket2";
+            this.Brecket2.Size = new System.Drawing.Size(80, 50);
+            this.Brecket2.TabIndex = 46;
+            this.Brecket2.Text = ")";
+            this.Brecket2.UseVisualStyleBackColor = false;
+            this.Brecket2.Click += new System.EventHandler(this.operator_click);
             // 
-            // button9
+            // PI
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(383, 227);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(82, 43);
-            this.button9.TabIndex = 47;
-            this.button9.Text = "M-";
-            this.button9.UseVisualStyleBackColor = false;
+            this.PI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PI.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PI.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PI.ForeColor = System.Drawing.Color.White;
+            this.PI.Location = new System.Drawing.Point(300, 379);
+            this.PI.Name = "PI";
+            this.PI.Size = new System.Drawing.Size(80, 50);
+            this.PI.TabIndex = 44;
+            this.PI.Text = "PI";
+            this.PI.UseVisualStyleBackColor = false;
+            this.PI.Click += new System.EventHandler(this.PI_Click);
             // 
-            // button10
+            // XandYpow
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(383, 180);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(82, 48);
-            this.button10.TabIndex = 46;
-            this.button10.Text = "M+";
-            this.button10.UseVisualStyleBackColor = false;
+            this.XandYpow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.XandYpow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.XandYpow.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.XandYpow.ForeColor = System.Drawing.Color.White;
+            this.XandYpow.Location = new System.Drawing.Point(376, 333);
+            this.XandYpow.Name = "XandYpow";
+            this.XandYpow.Size = new System.Drawing.Size(80, 50);
+            this.XandYpow.TabIndex = 43;
+            this.XandYpow.Text = "x^y";
+            this.XandYpow.UseVisualStyleBackColor = false;
+            this.XandYpow.Click += new System.EventHandler(this.operator_click);
             // 
-            // button11
+            // Mod
             // 
-            this.button11.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(383, 436);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(82, 48);
-            this.button11.TabIndex = 45;
-            this.button11.Text = "=";
-            this.button11.UseVisualStyleBackColor = false;
+            this.Mod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Mod.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Mod.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Mod.ForeColor = System.Drawing.Color.White;
+            this.Mod.Location = new System.Drawing.Point(376, 288);
+            this.Mod.Name = "Mod";
+            this.Mod.Size = new System.Drawing.Size(80, 50);
+            this.Mod.TabIndex = 42;
+            this.Mod.Text = "Mod";
+            this.Mod.UseVisualStyleBackColor = false;
+            this.Mod.Click += new System.EventHandler(this.operator_click);
             // 
-            // button12
+            // log
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(383, 395);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(82, 48);
-            this.button12.TabIndex = 44;
-            this.button12.Text = "+";
-            this.button12.UseVisualStyleBackColor = false;
+            this.log.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.log.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.log.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.log.ForeColor = System.Drawing.Color.White;
+            this.log.Location = new System.Drawing.Point(376, 243);
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(80, 50);
+            this.log.TabIndex = 41;
+            this.log.Text = "log";
+            this.log.UseVisualStyleBackColor = false;
+            this.log.Click += new System.EventHandler(this.log_Click);
             // 
-            // button13
+            // menuStrip1
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(383, 350);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(82, 48);
-            this.button13.TabIndex = 43;
-            this.button13.Text = "-";
-            this.button13.UseVisualStyleBackColor = false;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(456, 28);
+            this.menuStrip1.TabIndex = 48;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // button14
+            // sToolStripMenuItem
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(383, 307);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(82, 48);
-            this.button14.TabIndex = 42;
-            this.button14.Text = "×";
-            this.button14.UseVisualStyleBackColor = false;
+            this.sToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.standartToolStripMenuItem,
+            this.engineerToolStripMenuItem});
+            this.sToolStripMenuItem.Name = "sToolStripMenuItem";
+            this.sToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.sToolStripMenuItem.Text = "Mode";
             // 
-            // button15
+            // standartToolStripMenuItem
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(383, 269);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(82, 48);
-            this.button15.TabIndex = 41;
-            this.button15.Text = "÷";
-            this.button15.UseVisualStyleBackColor = false;
+            this.standartToolStripMenuItem.Name = "standartToolStripMenuItem";
+            this.standartToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.standartToolStripMenuItem.Text = "Standart";
+            this.standartToolStripMenuItem.Click += new System.EventHandler(this.standartToolStripMenuItem_Click);
             // 
-            // button16
+            // engineerToolStripMenuItem
             // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(383, 225);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(82, 48);
-            this.button16.TabIndex = 40;
-            this.button16.Text = "CE";
-            this.button16.UseVisualStyleBackColor = false;
+            this.engineerToolStripMenuItem.Name = "engineerToolStripMenuItem";
+            this.engineerToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.engineerToolStripMenuItem.Text = "Engineer";
+            this.engineerToolStripMenuItem.Click += new System.EventHandler(this.engineerToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(467, 484);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
+            this.ClientSize = new System.Drawing.Size(456, 473);
+            this.Controls.Add(this.Cos);
+            this.Controls.Add(this.Brecket2);
+            this.Controls.Add(this.PI);
+            this.Controls.Add(this.XandYpow);
+            this.Controls.Add(this.Mod);
+            this.Controls.Add(this.log);
+            this.Controls.Add(this.Sin);
+            this.Controls.Add(this.Brecket1);
+            this.Controls.Add(this.Fact);
+            this.Controls.Add(this.TenPower);
+            this.Controls.Add(this.Exp);
+            this.Controls.Add(this.Tan);
             this.Controls.Add(this.memorySubtract);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.MemoryAdd);
@@ -764,17 +741,20 @@
             this.Controls.Add(this.division);
             this.Controls.Add(this.clearLastDigit);
             this.Controls.Add(this.clearAll);
-            this.Controls.Add(this.clearEntry);
             this.Controls.Add(this.rational);
             this.Controls.Add(this.square);
             this.Controls.Add(this.root);
             this.Controls.Add(this.percent);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -789,7 +769,6 @@
         private System.Windows.Forms.Button division;
         private System.Windows.Forms.Button clearLastDigit;
         private System.Windows.Forms.Button clearAll;
-        private System.Windows.Forms.Button clearEntry;
         private System.Windows.Forms.Button multiply;
         private System.Windows.Forms.Button nine;
         private System.Windows.Forms.Button eight;
@@ -812,22 +791,22 @@
         private System.Windows.Forms.Button memoryClear;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button memorySubtract;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button Sin;
+        private System.Windows.Forms.Button Brecket1;
+        private System.Windows.Forms.Button Fact;
+        private System.Windows.Forms.Button TenPower;
+        private System.Windows.Forms.Button Exp;
+        private System.Windows.Forms.Button Tan;
+        private System.Windows.Forms.Button Cos;
+        private System.Windows.Forms.Button Brecket2;
+        private System.Windows.Forms.Button PI;
+        private System.Windows.Forms.Button XandYpow;
+        private System.Windows.Forms.Button Mod;
+        private System.Windows.Forms.Button log;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem sToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem standartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem engineerToolStripMenuItem;
     }
 }
 
