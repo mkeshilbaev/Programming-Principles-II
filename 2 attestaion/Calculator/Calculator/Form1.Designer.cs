@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.percent = new System.Windows.Forms.Button();
             this.root = new System.Windows.Forms.Button();
@@ -75,6 +76,8 @@
             this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.standartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.engineerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearEntry = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,7 +129,7 @@
             this.rational.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.rational.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rational.ForeColor = System.Drawing.Color.White;
-            this.rational.Location = new System.Drawing.Point(-1, 243);
+            this.rational.Location = new System.Drawing.Point(376, 423);
             this.rational.Name = "rational";
             this.rational.Size = new System.Drawing.Size(80, 50);
             this.rational.TabIndex = 3;
@@ -168,7 +171,7 @@
             this.clearAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearAll.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.clearAll.ForeColor = System.Drawing.Color.White;
-            this.clearAll.Location = new System.Drawing.Point(74, 243);
+            this.clearAll.Location = new System.Drawing.Point(0, 243);
             this.clearAll.Name = "clearAll";
             this.clearAll.Size = new System.Drawing.Size(80, 50);
             this.clearAll.TabIndex = 5;
@@ -352,9 +355,10 @@
             this.equal.ForeColor = System.Drawing.Color.White;
             this.equal.Location = new System.Drawing.Point(223, 423);
             this.equal.Name = "equal";
-            this.equal.Size = new System.Drawing.Size(233, 50);
+            this.equal.Size = new System.Drawing.Size(157, 50);
             this.equal.TabIndex = 23;
             this.equal.Text = "=";
+            this.equal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.equal.UseVisualStyleBackColor = false;
             this.equal.Click += new System.EventHandler(this.equal_Click);
             // 
@@ -472,11 +476,11 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F);
             this.textBox1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.Location = new System.Drawing.Point(12, 79);
+            this.textBox1.Location = new System.Drawing.Point(12, 70);
             this.textBox1.MaxLength = 12;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(432, 71);
+            this.textBox1.Size = new System.Drawing.Size(278, 71);
             this.textBox1.TabIndex = 30;
             this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -563,7 +567,7 @@
             this.Exp.TabIndex = 34;
             this.Exp.Text = "Exp";
             this.Exp.UseVisualStyleBackColor = false;
-            this.Exp.Click += new System.EventHandler(this.Exp_Click);
+            this.Exp.Click += new System.EventHandler(this.Exp_Click_1);
             // 
             // Tan
             // 
@@ -670,7 +674,7 @@
             this.sToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(456, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(301, 28);
             this.menuStrip1.TabIndex = 48;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -686,23 +690,44 @@
             // standartToolStripMenuItem
             // 
             this.standartToolStripMenuItem.Name = "standartToolStripMenuItem";
-            this.standartToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.standartToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.standartToolStripMenuItem.Text = "Standart";
             this.standartToolStripMenuItem.Click += new System.EventHandler(this.standartToolStripMenuItem_Click);
             // 
             // engineerToolStripMenuItem
             // 
             this.engineerToolStripMenuItem.Name = "engineerToolStripMenuItem";
-            this.engineerToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.engineerToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.engineerToolStripMenuItem.Text = "Engineer";
             this.engineerToolStripMenuItem.Click += new System.EventHandler(this.engineerToolStripMenuItem_Click);
+            // 
+            // clearEntry
+            // 
+            this.clearEntry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.clearEntry.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.clearEntry.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.clearEntry.ForeColor = System.Drawing.Color.White;
+            this.clearEntry.Location = new System.Drawing.Point(74, 243);
+            this.clearEntry.Name = "clearEntry";
+            this.clearEntry.Size = new System.Drawing.Size(80, 50);
+            this.clearEntry.TabIndex = 49;
+            this.clearEntry.Text = "CE";
+            this.clearEntry.UseVisualStyleBackColor = false;
+            this.clearEntry.Click += new System.EventHandler(this.clearEntry_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(456, 473);
+            this.ClientSize = new System.Drawing.Size(301, 473);
+            this.Controls.Add(this.clearEntry);
             this.Controls.Add(this.Cos);
             this.Controls.Add(this.Brecket2);
             this.Controls.Add(this.PI);
@@ -807,6 +832,8 @@
         private System.Windows.Forms.ToolStripMenuItem sToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem standartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem engineerToolStripMenuItem;
+        private System.Windows.Forms.Button clearEntry;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
