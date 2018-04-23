@@ -31,7 +31,7 @@ namespace Paint
             TRIANGLE,
             FILL,
             ERASER,
-            PIPETTE,
+            PIPETTE,           
             clearAll           
         };
 
@@ -161,6 +161,7 @@ namespace Paint
                 int h = Math.Abs(prev.Y - cur.Y);
                 g.DrawEllipse(pen, x, y, w, h);
             }
+
             pictureBox1.Refresh();
         }
 

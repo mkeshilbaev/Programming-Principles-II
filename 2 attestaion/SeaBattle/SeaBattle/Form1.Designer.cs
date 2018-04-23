@@ -52,7 +52,7 @@
             this.Horizontal.Font = new System.Drawing.Font("Bernard MT Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Horizontal.Location = new System.Drawing.Point(42, 320);
             this.Horizontal.Name = "Horizontal";
-            this.Horizontal.Size = new System.Drawing.Size(80, 30);
+            this.Horizontal.Size = new System.Drawing.Size(93, 30);
             this.Horizontal.TabIndex = 2;
             this.Horizontal.Text = "Horizontal";
             this.Horizontal.UseVisualStyleBackColor = false;
@@ -64,7 +64,7 @@
             this.Vertical.Font = new System.Drawing.Font("Bernard MT Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Vertical.Location = new System.Drawing.Point(42, 358);
             this.Vertical.Name = "Vertical";
-            this.Vertical.Size = new System.Drawing.Size(80, 30);
+            this.Vertical.Size = new System.Drawing.Size(93, 30);
             this.Vertical.TabIndex = 3;
             this.Vertical.Text = "Vertical";
             this.Vertical.UseVisualStyleBackColor = false;

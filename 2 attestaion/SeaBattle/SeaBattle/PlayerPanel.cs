@@ -43,9 +43,9 @@ namespace SeaBattle
 
         public void CreateBotShips()
         {
-
             Random rnd1 = new Random(Guid.NewGuid().GetHashCode());
             Random rnd2 = new Random(Guid.NewGuid().GetHashCode());
+
             if (playerType == PlayerType.Bot)
             {
                 while (brain.stIndex < brain.st.Length - 1)

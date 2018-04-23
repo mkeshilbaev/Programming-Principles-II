@@ -567,7 +567,6 @@
             this.Exp.TabIndex = 34;
             this.Exp.Text = "Exp";
             this.Exp.UseVisualStyleBackColor = false;
-            this.Exp.Click += new System.EventHandler(this.Exp_Click_1);
             // 
             // Tan
             // 
@@ -674,7 +673,7 @@
             this.sToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(301, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(300, 28);
             this.menuStrip1.TabIndex = 48;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -726,7 +725,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(301, 473);
+            this.ClientSize = new System.Drawing.Size(300, 473);
             this.Controls.Add(this.clearEntry);
             this.Controls.Add(this.Cos);
             this.Controls.Add(this.Brecket2);
@@ -773,6 +772,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
