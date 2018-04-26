@@ -14,23 +14,25 @@ namespace Tank
     class Tank
     {
         public GraphicsPath gp;
-        public int x, y;
+        public int X, Y;
         public int dir = 0;
 
         public Tank(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
-
+        
         public void Draw(Graphics g)
         {
             gp = new GraphicsPath();
-            int w = 50;
-            int h = 70;
+            int w = 25;
+            int h = 35;
+            int x = X - w;
+            int y = Y - h;
             gp.AddRectangle(new Rectangle(x, y, w, h));
             gp.AddEllipse(new Rectangle(x+8, y+8, w-15, h-20));
-            //gp.AddLine();
+
             SolidBrush brush = new SolidBrush(Color.Green);
             g.FillRectangle(brush, x, y, w, h);
             g.FillEllipse(new SolidBrush(Color.Yellow), x + 8, y + 8, w - 15, h - 20);
@@ -45,6 +47,6 @@ namespace Tank
                 gp.AddLine(x + w / 2, y + h / 2, x + w / 2, y + h / 2);
 
             g.DrawPath(new Pen(Color.Blue, 2), gp);
-        }
+        }     
     }
 }

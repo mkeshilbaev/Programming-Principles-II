@@ -12,11 +12,14 @@ namespace CALCULATOR
 {
     public partial class Form1 : Form
     {
-        Double first = 0, second = 0, result = 0;
+        Double firstNumber = 0, secondNumber = 0, result = 0;
         String operation = "";
         bool operation_pressed = false;
+        bool isFirstNumberEntered = false;
+        bool isSecondNumberEntered = false;
         double memory = 0;
         bool equalClicked = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -42,19 +45,13 @@ namespace CALCULATOR
         {
             if ((textBox1.Text == "0") || (operation_pressed))
                 textBox1.Text = "";
-            operation_pressed = false;
+                operation_pressed = false;
 
             Button btn = sender as Button;
+
             if (btn.Text == "," && !textBox1.Text.Contains(","))
             {
                 textBox1.Text += btn.Text;
-            }
-
-            if (equalClicked)
-            {
-                textBox1.Text = "";
-                textBox1.Text += btn.Text;
-                equalClicked = false;
             }
 
             else if (btn.Text != ",")
@@ -65,6 +62,13 @@ namespace CALCULATOR
                 }
                 textBox1.Text += btn.Text;
             }
+
+            if (equalClicked)
+            {
+                textBox1.Text = "";
+                textBox1.Text += btn.Text;
+                equalClicked = false;
+            }        
         }
 
         private void clearAll_Click(object sender, EventArgs e)
@@ -72,8 +76,8 @@ namespace CALCULATOR
             textBox1.Text = "0";
             label1.Text = "";
             result = 0;
-            first = 0;
-            second = 0;
+            firstNumber = 0;
+            secondNumber = 0;
         }
 
         private void clearEntry_Click(object sender, EventArgs e)
@@ -95,7 +99,8 @@ namespace CALCULATOR
         {
             Button btn = sender as Button;
 
-            if (first != 0)
+            
+            if (firstNumber != 0 && !operation_pressed)
             {
                 equal.PerformClick();
                 operation_pressed = true;
@@ -103,17 +108,19 @@ namespace CALCULATOR
             }
 
             else
-            {
-                operation = btn.Text;
-                first = Double.Parse(textBox1.Text);
+            {     
+                firstNumber = Double.Parse(textBox1.Text);
                 operation_pressed = true;
+                operation = btn.Text;
+                equalClicked = false;
+                isFirstNumberEntered = true;
             }
 
             if (operation_pressed == true)
             {
                 if (result == 0)
                 {
-                    label1.Text = first + " " + operation;
+                    label1.Text = firstNumber + " " + operation;
                 }
                 else
                     label1.Text = result + " " + operation;
@@ -124,24 +131,32 @@ namespace CALCULATOR
         {
             label1.Text = "";
             operation_pressed = false;
-            equalClicked = true;
 
-           // second = Double.Parse(textBox1.Text);
+            if (equalClicked == true)
+            {
+                result += secondNumber;
+                textBox1.Text = result.ToString();
+            }
+
+            else
+            {
+                equalClicked = true;
+                secondNumber = Double.Parse(textBox1.Text);
+            }
+             
             switch (operation)
             {
                 case "+":
-                   // operation_pressed = true;
-                    result = first + Double.Parse(textBox1.Text);
+                    operation_pressed = true;
+                    result = firstNumber + secondNumber;
                     textBox1.Text = Convert.ToString(result);
-                    first = result;
-
-                 //   if ()
+                    firstNumber = result;
 
                     if (textBox1.Text == "")
                     {
-                        result += first;
+                        result += firstNumber;
                     }
-                    
+
                     if (result != 0)
                     {
                         label1.Text = result + "";
@@ -153,10 +168,10 @@ namespace CALCULATOR
                     break;
 
                 case "-":
-                   // operation_pressed = true;
-                    result = first - Double.Parse(textBox1.Text);
+                    operation_pressed = true;
+                    result = firstNumber - secondNumber;
                     textBox1.Text = Convert.ToString(result);
-                    first = result;
+                    firstNumber = result;
 
                     if (result != 0)
                     {
@@ -169,10 +184,10 @@ namespace CALCULATOR
                     break;
 
                 case "×":
-                  //  operation_pressed = true;
-                    result = first * Double.Parse(textBox1.Text);
+                    operation_pressed = true;
+                    result = firstNumber * secondNumber;
                     textBox1.Text = Convert.ToString(result);
-                    first = result;
+                    firstNumber = result;
 
                     if (result != 0)
                     {
@@ -185,12 +200,12 @@ namespace CALCULATOR
                     break;
 
                 case "÷":
-                   // operation_pressed = true;
-                    if (second != 0)
+                    operation_pressed = true;
+                    if (secondNumber != 0)
                     {
-                        result = first / Double.Parse(textBox1.Text);
+                        result = firstNumber / secondNumber;
                         textBox1.Text = Convert.ToString(result);
-                        first = result;
+                        firstNumber = result;
                     }
 
                     else textBox1.Text = "impossible";
@@ -207,7 +222,7 @@ namespace CALCULATOR
 
                 case "%":
                     operation_pressed = true;
-                    result = first / 100;
+                    result = firstNumber + firstNumber * secondNumber/ 100;
                     textBox1.Text = Convert.ToString(result);
 
                     if (result != 0)
@@ -222,9 +237,9 @@ namespace CALCULATOR
 
                 case "Mod":
                     operation_pressed = true;
-                    result = first % Double.Parse(textBox1.Text);
+                    result = firstNumber % secondNumber;
                     textBox1.Text = Convert.ToString(result);
-                    label1.Text = first + " Mod";
+                    label1.Text = firstNumber + " Mod";
 
                     if (result != 0)
                     {
@@ -238,9 +253,9 @@ namespace CALCULATOR
 
                 case "x^y":
                     operation_pressed = true;
-                    result = Math.Pow(first, Double.Parse(textBox1.Text));
+                    result = Math.Pow(firstNumber, secondNumber);
                     textBox1.Text = Convert.ToString(result);
-                    label1.Text = first + "^";
+                    label1.Text = firstNumber + "^";
 
                     if (result != 0)
                     {
@@ -254,10 +269,8 @@ namespace CALCULATOR
 
                 case "Exp":
                     operation_pressed = true;
-                    Double i = Double.Parse(textBox1.Text);
-                    Double q;
-                    q = (result);
-                    textBox1.Text = Math.Exp(i * Math.Log(result * 4)).ToString();
+                    result = Math.Exp(firstNumber);
+                    textBox1.Text = Convert.ToString(result);
 
                     if (result != 0)
                     {
@@ -272,10 +285,9 @@ namespace CALCULATOR
                 default:
                     break;
             }
-            textBox1.Clear();
             operation_pressed = false;
-            textBox1.Text = result.ToString();
-           // label1.Text = "";
+            //   textBox1.Text = result.ToString();
+            isSecondNumberEntered = true;
         }
 
         private void root_Click(object sender, EventArgs e)
